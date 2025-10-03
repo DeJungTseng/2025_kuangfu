@@ -1,0 +1,119 @@
+[
+  {
+    "name": "花蓮縣光復鄉中山路二段222號",
+    "description": "需求: 清理家園, 搬運物資, 修繕房屋<br>備註: 需要清理家中泥<br>聯絡方式: 0908825521",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4234528,
+        23.66532164
+      ]
+    ],
+    "color": null,
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "無",
+    "description": "需求: 清理家園<br>備註: 二樓也淹水需要刮刀<br>聯絡方式: 0911246143",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4303971,
+        23.6634304
+      ]
+    ],
+    "color": null,
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "無",
+    "description": "需求: 飲用水, 食物, 保暖衣物/棉被 清理家園, 搬運物資<br>備註: <br>聯絡方式: 0912227591",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4264766,
+        23.66730929
+      ]
+    ],
+    "color": null,
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "無",
+    "description": "需求: 清理家園<br>備註: 物資均有，僅需人力<br>聯絡方式: 0919251373",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.42232,
+        23.66826559
+      ]
+    ],
+    "color": null,
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "光復鄉大馬村林森路294巷15號 (原夢工作坊)",
+    "description": "需求: 衣服，尺寸XL，夏衣 清理家園<br>備註: 衣服都在家裡，家裡的土跟外面一樣高，長者清理不便<br>聯絡方式: 0983094251",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4235281,
+        23.67328735
+      ]
+    ],
+    "color": null,
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "976花蓮縣光復鄉中正路二段17巷1-1號 (奇古匠手沖咖啡)",
+    "description": "需求: 清理家園<br>備註: 可準備鏟子耙子<br>聯絡方式: 0960737499",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4456043,
+        23.6611279
+      ]
+    ],
+    "color": null,
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "光復鄉中興路550號",
+    "description": "需求: 清理家園, 搬運物資<br>備註: <br>聯絡方式: 0919251188",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.422872,
+        23.67000245
+      ]
+    ],
+    "color": null,
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "光復鄉中華路301巷22號",
+    "description": "需求: 抽水馬達被土掩埋，水抽不上來 拜託水電師傅幫忙<br>備註: <br>聯絡方式: 0931300468",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4234913,
+        23.67045656
+      ]
+    ],
+    "color": null,
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "中山路二段125號",
+    "description": "需求: 飲用水, 食物, 尿布/生理用品/免洗衣物, 拖把、刮刀 、抹布、垃圾袋<br>備註: 拖把、刮刀 、抹布、垃圾袋、3-7歲孩童雨鞋2雙（男3歲1雙、女6歲1雙）、拉拉褲尿布XL<br>聯絡方式: 0972603310/kellycheng331",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4223787,
+        23.66381016
+      ]
+    ],
+    "color": null,
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  }
+]

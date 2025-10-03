@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spatial Info Viewer</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .leaflet-popup-content {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <script>
+        // Initialize the map and set its view to a central point in Hualien, Taiwan
+        const map = L.map('map').setView([23.67, 121.45], 13);
+
+        // Add a tile layer from OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        // Load the spatial data from the JSON file
+        fetch('3_rescue_map_1.json')
+            .then(response => response.json())
+            .then(data => {
+                const featureGroup = [];
+                data.forEach(placemark => {
+                    // Leaflet expects [lat, lon], but our data is [lon, lat], so we need to reverse it.
+                    let popupContent = `<b>${placemark.name}</b><br>${placemark.description}`;
+
+                    if (placemark.coordinates) {
+                        popupContent += '<br><br><b>Coordinates (Lon, Lat):</b>';
+                        popupContent += `<pre style="max-height: 100px; overflow-y: auto;">${JSON.stringify(placemark.coordinates, null, 2)}</pre>`;
+                    }
+
+                    let layer;
+                    if (placemark.type === 'Point') {
+                        const coords = placemark.coordinates[0];
+                        if (coords) {
+                            layer = L.marker([coords[1], coords[0]]);
+                        }
+                    } else if (placemark.type === 'LineString') {
+                        const leafletCoords = placemark.coordinates.map(c => [c[1], c[0]]);
+                        layer = L.polyline(leafletCoords, { color: 'blue' });
+                    } else if (placemark.type === 'Polygon') {
+                        const leafletCoords = placemark.coordinates.map(c => [c[1], c[0]]);
+                        layer = L.polygon(leafletCoords, { color: 'red' });
+                    }
+
+                    if (layer) {
+                        layer.bindPopup(popupContent);
+                        featureGroup.push(layer);
+                    }
+                });
+
+                // Add all features to the map in a layer group
+                const group = L.featureGroup(featureGroup).addTo(map);
+
+                // Zoom the map to fit all the features
+                if (group.getBounds().isValid()) {
+                    map.fitBounds(group.getBounds());
+                }
+            })
+            .catch(error => {
+                console.error('Error loading or processing spatial data:', error);
+                alert('Could not load 3_rescue_map_1.json. Make sure the file is in the same directory as this HTML file.');
+            });
+    </script>
+</body>
+
+</html>

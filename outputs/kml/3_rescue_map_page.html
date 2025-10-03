@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com; img-src 'self' data: https:; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://nominatim.openstreetmap.org https://unpkg.com; font-src 'self' data:; object-src 'none'; base-uri 'self';">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<title>ç½å¾éæ±å³æå°å</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  html, body, #map { height: 100%; margin: 0; }
+  .legend {
+    position:absolute; z-index:999; background:#fff; padding:12px 14px;
+    border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,.18);
+    left:10px; top:10px; font:18px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans TC";
+  }
+  .legend img { width:28px; height:28px; vertical-align:middle; }
+  .legend label { display:flex; align-items:center; gap:10px; margin:8px 0; cursor:pointer; }
+   .legend-icon {
+     width: 24px; 
+     height: 24px; 
+     border-radius: 50%; 
+     display: flex; 
+     align-items: center; 
+     justify-content: center; 
+     border: 2px solid white; 
+     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+     font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+   }
+
+  .refreshBox {
+    position:absolute; right:10px; top:10px; z-index:999; background:#fff;
+    padding:10px 12px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,.12);
+    font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans TC";
+  }
+  .refreshBox .secs { font-weight:700; font-size:18px; display:inline-block; min-width:2ch; text-align:right; }
+
+  .leaflet-popup-content { margin: 10px 14px; }
+  
+  .custom-div-icon {
+    background: transparent !important;
+    border: none !important;
+  }
+</style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- å·¦ä¸ç¯©é¸ -->
+  <div class="legend">
+     <label><input type="checkbox" id="chk-human" checked> 
+       <div class="legend-icon" style="background-color: #FF6B35; color: white; font-size: 16px;">ð ï¸</div> äººå
+     </label>
+     <label><input type="checkbox" id="chk-mat" checked> 
+       <div class="legend-icon" style="background-color: #4169E1; color: white; font-size: 16px;">ð¦</div> ç©è³
+     </label>
+     <label><input type="checkbox" id="chk-tool" checked> 
+       <div class="legend-icon" style="background-color: #DC3545; color: white; font-size: 16px;">ð§</div> æ©å·
+     </label>
+     <label><input type="checkbox" id="chk-humanmat" checked> 
+       <div class="legend-icon" style="background-color: #155724; color: white; font-size: 16px;">âï¸</div> äººå+ç©è³
+     </label>
+     <label><input type="checkbox" id="chk-toolmat" checked> 
+       <div class="legend-icon" style="background-color: #1E3A8A; color: white; font-size: 16px;">âï¸</div> æ©å·+ç©è³
+     </label>
+     <label><input type="checkbox" id="chk-toolhuman" checked> 
+       <div class="legend-icon" style="background-color: #6F42C1; color: white; font-size: 16px;">âï¸</div> æ©å·+äººå
+     </label>
+     <label><input type="checkbox" id="chk-other" checked> 
+       <div class="legend-icon" style="background-color: #6C757D; color: white; font-size: 16px;">â</div> å¶ä»
+     </label>
+  </div>
+
+  <!-- å³ä¸åæ¸ -->
+  <div class="refreshBox">
+    <div>ä¸ä¸æ¬¡æ´æ°ï¼<span id="countdown" class="secs">300</span> ç§</div>
+    <div style="opacity:.8">ç³»çµ±æ¯ <b>5 åé</b> æèªåæ´æ°å°å</div>
+    <div id="status" style="margin-top:8px;font-size:12px;opacity:.7;">è¼å¥ä¸­...</div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+  /* ===== ä½ ç SHEET ===== */
+  const API_URL = 'https://script.google.com/macros/s/AKfycbxjjQOQXrMR64rQ4YNMf0NLLEC6p8H21XiRjlYMijvfR9SPvT1x4tlCe2S4cjfX9m3xgg/exec';
+  const REFRESH_SEC = 300;
+
+  /* ===== Leaflet Init ===== */
+  const CENTER = { lat: 23.6699, lng: 121.4206, zoom: 13 };
+  const map = L.map('map', { zoomControl: false }).setView([CENTER.lat, CENTER.lng], CENTER.zoom);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 21 }).addTo(map);
+  L.control.zoom({ position: 'bottomleft' }).addTo(map);
+
+  const groups = {
+    human: L.layerGroup().addTo(map),
+    mat: L.layerGroup().addTo(map),
+    tool: L.layerGroup().addTo(map),
+    toolmat: L.layerGroup().addTo(map),
+     toolhuman: L.layerGroup().addTo(map),
+     humanmat: L.layerGroup().addTo(map),
+     other: L.layerGroup().addTo(map)
+  };
+
+  function clearGroups(){ for(const k in groups) groups[k].clearLayers(); }
+  function toggleLayer(on, layer){ if (on) map.addLayer(layer); else map.removeLayer(layer); }
+  function applyFilters(){
+    toggleLayer(document.getElementById('chk-human').checked, groups.human);
+    toggleLayer(document.getElementById('chk-mat').checked, groups.mat);
+    toggleLayer(document.getElementById('chk-tool').checked, groups.tool);
+    toggleLayer(document.getElementById('chk-toolmat').checked, groups.toolmat);
+    toggleLayer(document.getElementById('chk-toolhuman').checked, groups.toolhuman);
+     toggleLayer(document.getElementById('chk-humanmat').checked, groups.humanmat);
+     toggleLayer(document.getElementById('chk-other').checked, groups.other);
+  }
+  document.querySelectorAll('.legend input').forEach(cb => cb.addEventListener('change', applyFilters));
+
+  /* ===== Google Apps Script API ===== */
+  async function fetchSheet() {
+    try {
+      const response = await fetch(API_URL, { cache: 'no-store' });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      
+      if (!data || data.length === 0) {
+        return { cols: [], rows: [] };
+      }
+      
+      // ç¬¬ä¸ç­æ¯æ¨é¡ï¼å¶é¤æ¯è³æ
+      const cols = data[0] || [];
+      const rows = data.slice(1).map(row => ({
+        c: row.map(cell => ({ v: cell }))
+      }));
+      
+    return { cols, rows };
+    } catch (error) {
+      return { cols: [], rows: [] };
+    }
+  }
+
+  /* ===== å·¥å· ===== */
+  const esc = s => {
+    if (typeof s !== 'string') s = String(s || '');
+    return s.replace(/[&<>\"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  };
+  
+   // å»ºç«èªå®ç¾©åæ¨
+   function createCustomIcon(type) {
+     let iconColor = '#FF6B35'; // é è¨­æ©è²
+     let iconSymbol = 'ð¤'; // é è¨­åæ¨
+     
+     // æ ¹æéæ±é¡å¥é¸æåæ¨åé¡è² (æ¯åé¡å¥ç¨ç¹é¡è²)
+     if (type.includes('äººå') && type.includes('ç©è³')) {
+       // äººå+ç©è³ - æ·±ç¶ è²åå­é¬
+       iconColor = '#155724';
+       iconSymbol = 'âï¸';
+     } else if (type.includes('äººå')) {
+       if (type.includes('æ©å·')) {
+         // æ©å·+äººå - ç´«è²åå­é¬
+         iconColor = '#6F42C1';
+         iconSymbol = 'âï¸';
+       } else {
+         // äººå - æ©è²éå­
+         iconColor = '#FF6B35';
+         iconSymbol = 'ð ï¸';
+       }
+     } else if (type.includes('ç©è³')) {
+       if (type.includes('æ©å·')) {
+         // æ©å·+ç©è³ - æ·±èè²åå­é¬
+         iconColor = '#1E3A8A';
+         iconSymbol = 'âï¸';
+       } else {
+         // ç©è³ - èè²å¯¶ç®±
+         iconColor = '#4169E1';
+         iconSymbol = 'ð¦';
+       }
+     } else if (type.includes('æ©å·')) {
+       // æ©å· - ç´è²æ³æ
+       iconColor = '#DC3545';
+       iconSymbol = 'ð§';
+     } else if (type.includes('å¶ä»') || type === '' || !type) {
+       // å¶ä»é¡å¥ - ç°è²åè
+       iconColor = '#6C757D';
+       iconSymbol = 'â';
+     }
+     
+     // å»ºç« HTML åæ¨ï¼ä½¿ç¨ emoji
+     const htmlIcon = `
+       <div style="
+         width: 32px; 
+         height: 32px; 
+         background-color: ${iconColor}; 
+         border: 2px solid white; 
+         border-radius: 50%; 
+         display: flex; 
+         align-items: center; 
+         justify-content: center; 
+         color: white; 
+         font-size: 18px;
+         box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+         line-height: 1;
+         font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+       ">${iconSymbol}</div>
+     `;
+     
+     return L.divIcon({
+       html: htmlIcon,
+       className: 'custom-div-icon',
+       iconSize: [32, 32],
+       iconAnchor: [16, 16],
+       popupAnchor: [0, -16]
+     });
+   }
+  
+  function parseLatLng(raw){
+    if(!raw) return null;
+    
+    // è¼¸å¥é©è­ï¼åªåè¨±æ¸å­ãéèãç©ºæ ¼ãå°æ¸é»ãè² è
+    const str = String(raw).trim();
+    if (!/^[-\d\s.,]+$/.test(str)) {
+      return null;
+    }
+    
+    // æ ¼å¼1: 23.6699, 121.4206 (ç·¯åº¦, ç¶åº¦)
+    let m = str.match(/^(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)$/);
+    if (m) {
+      return {lat: parseFloat(m[1]), lng: parseFloat(m[2])};
+    }
+    
+    // æ ¼å¼2: 121.4206, 23.6699 (ç¶åº¦, ç·¯åº¦) - å¦æç¶åº¦ > ç·¯åº¦ï¼å¯è½æ¯éç¨®æ ¼å¼
+    m = str.match(/^(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)$/);
+    if (m) {
+      const first = parseFloat(m[1]);
+      const second = parseFloat(m[2]);
+      // å¦æç¬¬ä¸åæ¸å­æ¯è¼å¤§ï¼å¯è½æ¯ç¶åº¦å¨å
+      if (Math.abs(first) > Math.abs(second) && first > 100) {
+        return {lat: second, lng: first};
+      }
+      return {lat: first, lng: second};
+    }
+    
+    // æ ¼å¼3: 23.6699 121.4206 (ç©ºæ ¼åé)
+    m = str.match(/^(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)$/);
+    if (m) {
+      return {lat: parseFloat(m[1]), lng: parseFloat(m[2])};
+    }
+    
+    // æ ¼å¼4: åå«å¶ä»æå­ï¼åè©¦æåæ¸å­
+    // const numbers = str.match(/-?\d+(?:\.\d+)?/g);
+    // if (numbers && numbers.length >= 2) {
+    //   const first = parseFloat(numbers[0]);
+    //   const second = parseFloat(numbers[1]);
+    //   // å¦æç¬¬ä¸åæ¸å­æ¯è¼å¤§ï¼å¯è½æ¯ç¶åº¦å¨å
+    //   if (Math.abs(first) > Math.abs(second) && first > 100) {
+    //     return {lat: second, lng: first};
+    //   }
+    //   return {lat: first, lng: second};
+    // }
+    
+    return null;
+  }
+  
+  // å°åè½ç¶ç·¯åº¦ (æ¯æ´éæ­¥ç°¡åæ¸¬è©¦)
+  async function geocodeAddress(address) {
+    if (!address) return null;
+    
+    // è¼¸å¥é©è­ï¼éå¶å°åé·åº¦åå­ç¬¦
+    const cleanAddress = String(address).trim();
+    if (cleanAddress.length > 200 || !/^[\u4e00-\u9fff\u3400-\u4dbf\w\s\d\-.,()ï¼ï¼]+$/.test(cleanAddress)) {
+      return null;
+    }
+
+    // åæª¢æ¥æ¯å¦å·²ç¶æ¯åº§æ¨æ ¼å¼
+    const coord = parseLatLng(address);
+    if (coord) {
+      return coord;
+    }
+
+    let currentAddress = cleanAddress;
+    let attemptCount = 0;
+
+    // éæ­¥ç°¡åä¸¦æ¸¬è©¦è½æ
+    while (currentAddress && currentAddress.length >= 2) {
+      attemptCount++;
+
+      try {
+        const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(currentAddress)}&countrycodes=tw&limit=1`;
+
+        const response = await fetch(url);
+
+        if (!response.ok) {
+          throw new Error(`Nominatim API error: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (data && data.length > 0) {
+          const result = {
+            lat: parseFloat(data[0].lat),
+            lng: parseFloat(data[0].lon)
+          };
+          return result;
+        }
+      } catch (error) {
+        // éé»èçé¯èª¤
+      }
+
+      // å¦æè½æå¤±æï¼é²è¡ä¸ä¸æ­¥ç°¡å
+      const previousAddress = currentAddress;
+      
+      // 1. ç§»é¤éµéåè (3-5ä½æ¸å­éé ­)
+      if (currentAddress.match(/^\d{3,5}\s*/)) {
+        currentAddress = currentAddress.replace(/^\d{3,5}\s*/, '').trim();
+      }
+      // 2. ç§»é¤æ¨å±¤è³è¨ (å¦ï¼3æ¨ãB1ãå°ä¸1æ¨ç­)
+      else if (currentAddress.match(/[0-9]+[æ¨å±¤]|[B][0-9]+|[å°ä¸][0-9]+[æ¨å±¤]?/)) {
+        currentAddress = currentAddress.replace(/[0-9]+[æ¨å±¤]|[B][0-9]+|[å°ä¸][0-9]+[æ¨å±¤]?/g, '').trim();
+      }
+      // 3. ç§»é¤éçèç¢¼ (å¦ï¼123èã456ä¹1èç­)
+      else if (currentAddress.match(/[0-9]+[ä¹]?[0-9]*[è]/)) {
+        currentAddress = currentAddress.replace(/[0-9]+[ä¹]?[0-9]*[è]/g, '').trim();
+      }
+      // 4. ç§»é¤å··å¼è³è¨ (å¦ï¼123å··ã456å¼ç­)
+      else if (currentAddress.match(/[0-9]+[å··å¼]/)) {
+        currentAddress = currentAddress.replace(/[0-9]+[å··å¼]/g, '').trim();
+      }
+      // 5. ç§»é¤å¶ä»è©³ç´°è³è¨ (å¦ï¼æ®µãéãé°ç­)
+      else if (currentAddress.match(/[0-9]+[æ®µéé°]/)) {
+        currentAddress = currentAddress.replace(/[0-9]+[æ®µéé°]/g, '').trim();
+      }
+      // 6. ç§»é¤æææ¸å­åç¹æ®ç¬¦èï¼åªä¿çè·¯å
+      else if (currentAddress.match(/[0-9]+|[ä¹èå··å¼æ®µéé°]/)) {
+        currentAddress = currentAddress.replace(/[0-9]+/g, '').replace(/[ä¹èå··å¼æ®µéé°]/g, '').trim();
+      }
+      // 7. å¦æç¡æ³åç°¡åï¼è·³åºå¾ªç°
+      else {
+        break;
+      }
+
+      // å¦æç°¡åå¾å°åæ²æè®åï¼è·³åºå¾ªç°é¿åç¡éå¾ªç°
+      if (currentAddress === previousAddress) {
+        break;
+      }
+    }
+
+    return null;
+  }
+
+   /* ===== å°ååå§å ===== */
+   let isMapInitialized = false;
+   
+   function initializeMap() {
+     if (isMapInitialized) return;
+     
+     isMapInitialized = true;
+   }
+   
+   /* ===== è³ææ´æ° ===== */
+   async function updateMapData(){
+     const statusEl = document.getElementById('status');
+     statusEl.textContent = 'æ­£å¨æ´æ°è³æ...';
+     
+     const isFirstLoad = !isMapInitialized;
+     
+    const { cols, rows } = await fetchSheet();
+     
+     statusEl.textContent = `åå¾ ${rows.length} ç­è³æï¼æ­£å¨èç...`;
+     
+    clearGroups();
+    const bounds = L.latLngBounds([]);
+     let processedCount = 0;
+     let skippedCount = 0;
+
+    // èçæ¯ä¸ç­è³æ
+    for (const r of rows) {
+      const values = r.c.map(c => c ? c.v : '');
+      const obj = {}; 
+      cols.forEach((h, i) => obj[h] = values[i]);
+
+       const addr = obj['æå¨å°å'] || obj['éæ±å°åæåº§æ¨ '] || obj['éæ±å°åæåº§æ¨'] || '';
+       const providedCoords = obj['æå¨ç¶ç·¯åº¦(æå­¸å¨ä¸æ¹)'] || obj['æä¾ç¶ç·¯åº¦'] || obj['ç¶ç·¯åº¦'] || '';
+      
+      let pt = null;
+      
+       // åªåä½¿ç¨ãæå¨ç¶ç·¯åº¦ãæ¬ä½
+       if (providedCoords) {
+         pt = parseLatLng(providedCoords);
+       }
+       
+       // å¦ææ²ææä¾ç¶ç·¯åº¦ææ ¼å¼ä¸æ­£ç¢ºï¼åè©¦è½æå°å
+       if (!pt && addr) {
+         pt = await geocodeAddress(addr);
+       }
+       
+       if (!pt) {
+         skippedCount++;
+         continue;
+       }
+      
+      processedCount++;
+
+      const type = obj['éæ±é¡å¥ï¼å®é¸ / ä¸æï¼  '] || obj['éæ±é¡å¥'] || '';
+      const desc = obj['éæ±è©³ç´°èªªæ  '] || obj['éæ±è©³ç´°èªªæ'] || '';
+      const name = obj['è¯çµ¡äººå§å  '] || obj['è¯çµ¡äºº'] || '';
+      const tel = obj['è¯ç¹«æ¹å¼'] || '';
+      const time = obj['æéæ³è¨'] || obj['æé'] || '';
+      const materials = obj['éè¦çç©è³'] || '';
+      const manpower = obj['éè¦çäººå'] || '';
+      const notes = obj['åè¨»'] || '';
+
+      // æ ¼å¼åæéçº YYYY-MM-DD HH:MM:SS
+      let formattedTime = '';
+      if (time) {
+        try {
+          const date = new Date(time);
+          if (!isNaN(date.getTime())) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            const hours = String(date.getHours()).padStart(2, '0');
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+            const seconds = String(date.getSeconds()).padStart(2, '0');
+            formattedTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+          } else {
+            formattedTime = time; // å¦æç¡æ³è§£æï¼ä½¿ç¨åå§å¼
+          }
+        } catch (error) {
+          formattedTime = time; // å¦æç¼çé¯èª¤ï¼ä½¿ç¨åå§å¼
+        }
+      }
+
+      const navUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(pt.lat)},${encodeURIComponent(pt.lng)}`;
+      const coordSource = providedCoords ? 'æå¨ç¶ç·¯åº¦' : 'å°åè½æ';
+      const popup = `
+        <div style="font-size:16px;font-weight:700;">
+          <div><strong>${esc(type)}</strong></div>
+          <div>å°åï¼${esc(addr)}</div>
+          ${providedCoords ? `<div>æå¨ç¶ç·¯åº¦ï¼${esc(providedCoords)}</div>` : ''}
+          <div style="font-size:12px;color:#666;margin:5px 0;">ð åº§æ¨ä¾æºï¼${esc(coordSource)}</div>
+          <div>èªªæï¼${esc(desc)}</div>
+          <div>è¯çµ¡äººï¼${esc(name)}</div>
+          <div>è¯ç¹«æ¹å¼ï¼${esc(tel)}</div>
+          <div>æéï¼${esc(formattedTime)}</div>
+          ${materials ? `<div>éè¦ç©è³ï¼${esc(materials)}</div>` : ''}
+          ${manpower ? `<div>éè¦äººåï¼${esc(manpower)}</div>` : ''}
+          ${notes ? `<div>åè¨»ï¼${esc(notes)}</div>` : ''}
+          <a href="${navUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;padding:6px 10px;background:#1E88E5;color:#fff;border-radius:6px;text-decoration:none;">å°èªå°æ­¤è</a>
+        </div>`;
+
+       const customIcon = createCustomIcon(type);
+       const marker = L.marker([pt.lat, pt.lng], { icon: customIcon }).bindPopup(popup);
+      
+       // æ ¹æéæ±é¡å¥åé¡å°ä¸ååå±¤
+       if (type.includes('äººå') && type.includes('ç©è³')) {
+         // äººå+ç©è³
+         groups.humanmat.addLayer(marker);
+       } else if (type.includes('äººå')) {
+         if (type.includes('æ©å·')) {
+           groups.toolhuman.addLayer(marker);
+         } else {
+           groups.human.addLayer(marker);
+         }
+       } else if (type.includes('ç©è³')) {
+         if (type.includes('æ©å·')) {
+           groups.toolmat.addLayer(marker);
+         } else {
+           groups.mat.addLayer(marker);
+         }
+       } else if (type.includes('æ©å·')) {
+         groups.tool.addLayer(marker);
+       } else if (type.includes('å¶ä»') || type === '' || !type) {
+         // å¶ä»é¡å¥
+         groups.other.addLayer(marker);
+       } else {
+         // é è¨­åé¡å°å¶ä»
+         groups.other.addLayer(marker);
+       }
+      
+      bounds.extend([pt.lat, pt.lng]);
+    }
+
+     statusEl.textContent = `å®æï¼é¡¯ç¤º ${processedCount} åæ¨è¨`;
+     
+     // ä¿æé è¨­è¦éï¼ä¸èªåèª¿æ´
+     if (!bounds.isValid()) {
+       statusEl.textContent = 'æ²ææ¾å°å¯é¡¯ç¤ºçæ¨è¨';
+     }
+     
+     // æ¨è¨å°åå·²åå§å
+     if (!isMapInitialized) {
+       initializeMap();
+     }
+    applyFilters();
+  }
+
+  /* ===== åæ¸å·æ° ===== */
+  let remain = REFRESH_SEC;
+  const $cd = document.getElementById('countdown');
+  
+  // é²æ­¢è¨æ¶é«æ´©æ¼ï¼å²å­ interval ID ä»¥ä¾¿æ¸ç
+  const refreshInterval = setInterval(()=>{
+    remain -= 1;
+    if(remain<=0){ 
+      updateMapData(); 
+      remain=REFRESH_SEC; 
+    }
+    if ($cd) {
+      $cd.textContent = remain;
+    }
+  },1000);
+  
+  // é é¢å¸è¼ææ¸ç interval
+  window.addEventListener('beforeunload', () => {
+    if (refreshInterval) {
+      clearInterval(refreshInterval);
+    }
+  });
+
+   // ç¬¬ä¸æ¬¡è¼å¥
+   updateMapData();
+  </script>
+</body>
+</html>
