@@ -157,10 +157,10 @@ def extract_placemark_data(file_path):
 
 if __name__ == '__main__':
     # File name the script expects
-    kml_file = 'outputs/kml/5_requirement_map.kml' 
+    kml_file = 'outputs/downloaded/8_lin_map.kml' 
     # File name that was uploaded
     actual_kml_file = '光復鄉-救災資訊整合.kml' 
-    output_filename = 'spatial_info.json'
+    output_filename = 'outputs/spatial_info_json/8_spatial_info.json'
 
     # --- FIX THE FILE NAME ISSUE HERE (Kept from previous fix) ---
     if not os.path.exists(kml_file) and os.path.exists(actual_kml_file):

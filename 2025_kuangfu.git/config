@@ -1,0 +1,7 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+[remote "origin"]
+	url = https://github.com/DeJungTseng/2025_kuangfu.git
+	fetch = +refs/heads/*:refs/remotes/origin/*

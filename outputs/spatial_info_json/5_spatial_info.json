@@ -1,0 +1,197 @@
+[
+  {
+    "name": "人力",
+    "description": "時間戳記: 2025/9/26 下午 10:28:05<br>地點: 花蓮縣光復鄉中山路二段222號<br>Latitude: 23.66532164<br>Longitude: 121.4234528<br>聯繫方式: 0908825521<br>需要的物資: <br>需要的人力: 清理家園, 搬運物資, 修繕房屋<br>備註: 需要清理家中泥",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4234528,
+        23.66532164
+      ]
+    ],
+    "color": "#E65100",
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "人力",
+    "description": "時間戳記: 2025/9/26 下午 10:35:57<br>地點: (23.6634304, 121.4303971)<br>Latitude: 23.6634304<br>Longitude: 121.4303971<br>聯繫方式: 0911246143<br>需要的物資: <br>需要的人力: 清理家園<br>備註: 二樓也淹水需要刮刀",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4303971,
+        23.6634304
+      ]
+    ],
+    "color": "#E65100",
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "人力",
+    "description": "時間戳記: 2025/9/27 上午 7:49:20<br>地點: 23°40'01.5\"N 121°25'35.2\"E<br>Latitude: 23.66730929<br>Longitude: 121.4264766<br>聯繫方式: 0912227591<br>需要的物資: 飲用水, 食物, 保暖衣物/棉被<br>需要的人力: 清理家園, 搬運物資<br>備註:",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4264766,
+        23.66730929
+      ]
+    ],
+    "color": "#E65100",
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "人力",
+    "description": "時間戳記: 2025/9/27 上午 10:14:24<br>地點: 光復鄉中興路500號<br>Latitude: 23.66826559<br>Longitude: 121.42232<br>聯繫方式: ‘0919251373<br>需要的物資: <br>需要的人力: 清理家園<br>備註: 物資均有，僅需人力",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.42232,
+        23.66826559
+      ]
+    ],
+    "color": "#E65100",
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "人力+物資",
+    "description": "時間戳記: 2025/9/27 上午 10:17:55<br>地點: 光復鄉大馬村林森路294巷15號 (原夢工作坊)<br>Latitude: 23.67328735<br>Longitude: 121.4235281<br>聯繫方式: 0983094251<br>需要的物資: 衣服，尺寸XL，夏衣<br>需要的人力: 清理家園<br>備註: 衣服都在家裡，家裡的土跟外面一樣高，長者清理不便",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4235281,
+        23.67328735
+      ]
+    ],
+    "color": "#0288D1",
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "人力",
+    "description": "時間戳記: 2025/9/27 上午 10:48:34<br>地點: 976花蓮縣光復鄉中正路二段17巷1-1號 (奇古匠手沖咖啡)<br>Latitude: 23.66112792<br>Longitude: 121.4456043<br>聯繫方式: 0960737499<br>需要的物資: <br>需要的人力: 清理家園<br>備註: 可準備鏟子耙子",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4456043,
+        23.66112792
+      ]
+    ],
+    "color": "#E65100",
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "人力",
+    "description": "時間戳記: 2025/9/27 下午 5:59:36<br>地點: 光復鄉中興路550號<br>Latitude: 23.67000245<br>Longitude: 121.422872<br>聯繫方式: 0919251188<br>需要的物資: <br>需要的人力: 清理家園, 搬運物資<br>備註:",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.422872,
+        23.67000245
+      ]
+    ],
+    "color": "#E65100",
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "人力",
+    "description": "時間戳記: 2025/9/27 下午 8:19:17<br>地點: 光復鄉中華路301巷22號<br>Latitude: 23.67045656<br>Longitude: 121.4234913<br>聯繫方式: 0931300468<br>需要的物資: 抽水馬達被土掩埋，水抽不上來<br>需要的人力: 拜託水電師傅幫忙<br>備註:",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4234913,
+        23.67045656
+      ]
+    ],
+    "color": "#E65100",
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "物資",
+    "description": "時間戳記: 2025/9/27 下午 9:28:57<br>地點: 中山路二段125號<br>Latitude: 23.66381016<br>Longitude: 121.4223787<br>聯繫方式: 0972603310/kellycheng331<br>需要的物資: 飲用水, 食物, 尿布/生理用品/免洗衣物, 醫療用品, 拖把、刮刀 、抹布、垃圾袋<br>需要的人力: <br>備註: 拖把、刮刀 、抹布、垃圾袋、3-7歲孩童雨鞋2雙（男3歲1雙、女6歲1雙）、拉拉褲尿布XL、",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4223787,
+        23.66381016
+      ]
+    ],
+    "color": "#0288D1",
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "人力",
+    "description": "時間戳記: 2025/9/27 下午 10:59:44<br>地點: 976花蓮縣光復鄉中興路568號<br>Latitude: 23.67044688<br>Longitude: 121.4229396<br>聯繫方式: Line mark88621<br>需要的物資: <br>需要的人力: 清理家園, 搬運物資<br>備註: 如果有人力 還需要鏟子 目前還沒有單位幫忙 有尋求慈濟 但要打給村長 我們打不進去 麻煩了",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4229396,
+        23.67044688
+      ]
+    ],
+    "color": "#E65100",
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "物資",
+    "description": "時間戳記: 2025/9/28 上午 12:22:17<br>地點: 花蓮縣光復鄉中山路二段269巷9號<br>Latitude: 23.66747394<br>Longitude: 121.4236228<br>聯繫方式: 0975923591<br>需要的物資: 高壓水槍<br>需要的人力: <br>備註: 高壓水槍",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4236228,
+        23.66747394
+      ]
+    ],
+    "color": "#0288D1",
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "人力",
+    "description": "時間戳記: 2025/9/28 上午 10:45:02<br>地點: (23.6630210, 121.4293967)<br>Latitude: 23.663021<br>Longitude: 121.4293967<br>聯繫方式: 0930979266<br>需要的物資: <br>需要的人力: 清理家園, 修繕房屋<br>備註: 無",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4293967,
+        23.663021
+      ]
+    ],
+    "color": "#E65100",
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "物資",
+    "description": "時間戳記: 2025/9/28 下午 10:56:05<br>地點: 花蓮縣光復鄉中山路二段269巷9號<br>Latitude: 23.66717643<br>Longitude: 121.4236031<br>聯繫方式: 0975923591<br>需要的物資: 醫療用品, 紫菌素軟膏*2、四方橘色桶子<br>需要的人力: <br>備註: 紫菌素軟膏*2、四方橘色桶子",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4236031,
+        23.66717643
+      ]
+    ],
+    "color": "#0288D1",
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "人力, 物資",
+    "description": "時間戳記: 2025/9/28 下午 11:52:26<br>地點: 花蓮縣光復鄉中山路二段235號<br>Latitude: 23.66632236<br>Longitude: 121.4236609<br>聯繫方式: 0921170613<br>需要的物資: 飲用水, 食物, 運動飲料、礦泉水、麵包、八寶粥、毛巾、鏟子（小的）、耙子（小的）、鋤頭<br>需要的人力: 清理家園, 清運淤泥、丟棄大型傢俱<br>備註: 午餐：20個便當",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4236609,
+        23.66632236
+      ]
+    ],
+    "color": "#F57C00",
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  },
+  {
+    "name": "人力",
+    "description": "時間戳記: 2025/9/29 上午 11:49:03<br>地點: 學士街160巷9號 (藍小姐)<br>Latitude: 23.66969713<br>Longitude: 121.4288708<br>聯繫方式: 0912225722 楊助理<br>需要的物資: 維修鐵捲門的師傅<br>需要的人力: 修繕房屋<br>備註:",
+    "type": "Point",
+    "coordinates": [
+      [
+        121.4288708,
+        23.66969713
+      ]
+    ],
+    "color": "#E65100",
+    "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+  }
+]

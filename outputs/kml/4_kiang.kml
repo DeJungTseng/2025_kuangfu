@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>花蓮光復救災資訊地圖</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 60px;
+            left: 0;
+            right: 0;
+        }
+        #sidebar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 350px;
+            max-height: calc(100% - 80px);
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            z-index: 2100;
+            display: none;
+            overflow: hidden;
+        }
+        #sidebar.active {
+            display: block;
+        }
+        #sidebar-toggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1001;
+            background: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 12px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+        
+        /* Mobile-specific positioning to avoid zoom control conflicts */
+        @media (max-width: 768px) {
+            #sidebar-toggle {
+                top: 10px;
+                right: 10px;
+                z-index: 1001;
+            }
+            
+            /* Mobile bottom navigation layout */
+            .navbar .row {
+                justify-content: space-between !important;
+            }
+            
+            .navbar .col-md-8 {
+                flex: 0 0 auto !important;
+                width: auto !important;
+            }
+            
+            .navbar .col-md-4 {
+                flex: 0 0 auto !important;
+                width: auto !important;
+                justify-content: flex-end !important;
+            }
+        }
+        .sidebar-header {
+            padding: 15px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+            position: relative;
+        }
+        .sidebar-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #6c757d;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .sidebar-close:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            color: #000;
+        }
+        .sidebar-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #dee2e6;
+            background: #f8f9fa;
+        }
+        .sidebar-tab {
+            flex: 1;
+            min-width: 80px;
+            padding: 8px 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 12px;
+            text-align: center;
+            color: #6c757d;
+            transition: all 0.3s;
+        }
+        .sidebar-tab:hover {
+            background: #e9ecef;
+        }
+        .sidebar-tab.active {
+            background: white;
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            margin-bottom: -2px;
+        }
+        .sidebar-content {
+            max-height: calc(100vh - 250px);
+            overflow-y: auto;
+            padding: 10px;
+        }
+        .data-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .data-list-item {
+            padding: 10px;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .data-list-item:hover {
+            background: #f8f9fa;
+            border-color: #007bff;
+        }
+        .data-list-item.active {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        .data-list-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 4px;
+        }
+        .data-list-item-title {
+            font-weight: bold;
+            font-size: 14px;
+            flex: 1;
+        }
+        .data-list-item-timestamp {
+            font-size: 10px;
+            color: #6c757d;
+            white-space: nowrap;
+            margin-left: 8px;
+            line-height: 1.2;
+        }
+        .data-list-item.active .data-list-item-timestamp {
+            color: #e0e0e0 !important;
+        }
+        .data-list-item-details {
+            font-size: 12px;
+            color: #6c757d;
+        }
+        .data-list-item.active .data-list-item-details {
+            color: #e0e0e0 !important;
+        }
+        .data-list-item-address {
+            font-size: 11px;
+            color: #007bff;
+            margin-top: 2px;
+        }
+        .data-list-item.active .data-list-item-address {
+            color: #a0c4ff !important;
+        }
+        .tab-pane {
+            display: none;
+        }
+        .tab-pane.active {
+            display: block;
+        }
+        .list-counter {
+            font-size: 11px;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+        .filter-container {
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .filter-input {
+            width: 100%;
+            padding: 8px 35px 8px 12px;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        .filter-input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+        }
+        .filter-clear {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #6c757d;
+            cursor: pointer;
+            padding: 4px;
+            display: none;
+        }
+        .filter-clear:hover {
+            color: #dc3545;
+        }
+        .filter-input:not(:placeholder-shown) + .filter-clear {
+            display: block;
+        }
+        .no-results {
+            text-align: center;
+            color: #6c757d;
+            padding: 20px;
+            font-size: 14px;
+        }
+        .navbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(248, 249, 250, 0.9);
+            z-index: 1000;
+        }
+        .readme-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            min-width: 90%;
+            max-height: 70%;
+            overflow-y: auto;
+            z-index: 1001;
+        }
+        .readme-closer {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .tutorial-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            min-width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            z-index: 1001;
+        }
+        .tutorial-closer {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .leaflet-popup-content {
+            min-width: 250px;
+            max-width: 350px;
+        }
+        .popup-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .custom-marker {
+            background-color: white;
+            border: 2px solid #333;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        .village-label {
+            width: auto !important;
+            height: auto !important;
+        }
+        .village-label div {
+            transform: translate(-50%, -50%);
+        }
+        
+        /* Pulse animation for highlighted temporary markers */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        /* Tutorial mode dropdown at top-center */
+        #tutorial-dropdown-container {
+            position: absolute;
+            top: 10px;
+            left: 40%;
+            transform: translateX(-50%);
+            z-index: 1002;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        #tutorial-dropdown {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            min-width: 150px;
+        }
+        
+        /* Tutorial overlay for step-by-step guide */
+        #tutorial-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none; /* Allow clicking through to map */
+            z-index: 2000;
+        }
+        
+        #tutorial-overlay.active {
+            display: block;
+        }
+        
+        #tutorial-overlay.blocking {
+            background: rgba(0, 0, 0, 0.7);
+            pointer-events: all; /* Block interactions when needed */
+        }
+        
+        #tutorial-steps {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            pointer-events: all; /* Steps box is always clickable */
+        }
+        
+        /* Mobile responsiveness for tutorial */
+        @media (max-width: 768px) {
+            #tutorial-steps {
+                bottom: 120px;
+                left: 10px;
+                right: 10px;
+                transform: none;
+                width: auto;
+                max-width: none;
+                padding: 15px 20px;
+                border-radius: 8px;
+            }
+            
+            #tutorial-steps h4 {
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+            
+            #tutorial-steps p {
+                font-size: 14px;
+                margin: 8px 0;
+            }
+            
+            .tutorial-button {
+                padding: 10px 15px;
+                font-size: 13px;
+                margin: 8px 3px;
+            }
+            
+            #tutorial-button-container {
+                flex-wrap: wrap;
+                gap: 8px !important;
+            }
+        }
+        
+        #tutorial-steps h4 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        
+        #tutorial-steps p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        
+        .tutorial-button {
+            margin: 10px 5px;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .tutorial-button.primary {
+            background: #007bff;
+            color: white;
+        }
+        
+        .tutorial-button.secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        /* Enhanced highlight effect for clickable areas during tutorial */
+        .tutorial-highlight {
+            animation: tutorialPulse 1.5s infinite;
+            position: relative;
+            z-index: 2001;
+            border: 3px solid #ff6b6b !important;
+            background: linear-gradient(45deg, rgba(255, 107, 107, 0.1), rgba(255, 107, 107, 0.3)) !important;
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+        
+        .tutorial-highlight::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 2px dashed #ff6b6b;
+            border-radius: 8px;
+            animation: tutorialRotate 3s linear infinite;
+            z-index: -1;
+        }
+        
+        .tutorial-highlight::after {
+            content: '👆';
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            animation: tutorialBounce 1s infinite;
+            z-index: 2002;
+        }
+        
+        @keyframes tutorialPulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.8);
+            }
+            50% {
+                box-shadow: 0 0 0 15px rgba(255, 107, 107, 0.3);
+            }
+            100% {
+                box-shadow: 0 0 0 25px rgba(255, 107, 107, 0);
+            }
+        }
+        
+        @keyframes tutorialRotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes tutorialBounce {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-8px);
+            }
+        }
+        
+        #tutorial-marker {
+            display: none;
+        }
+        
+        /* Red border for tutorial popup */
+        .tutorial-highlight-popup .leaflet-popup-content-wrapper {
+            border: 3px solid #ff6b6b;
+            box-shadow: 0 3px 14px rgba(255, 107, 107, 0.4);
+        }
+        
+        .tutorial-highlight-popup .leaflet-popup-tip {
+            border-top: 3px solid #ff6b6b;
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJ1JR851SJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-FJ1JR851SJ');
+    </script>
+</head>
+<body>
+    <div id="map"></div>
+    
+    <!-- Tutorial Mode Dropdown at Top-Center -->
+    <div id="tutorial-dropdown-container">
+        <label for="tutorial-dropdown" style="margin: 0; font-size: 14px; font-weight: 500;">教學</label>
+        <select id="tutorial-dropdown" onchange="startTutorial(this.value)">
+            <option value="">請選擇類型...</option>
+            <option value="需要志工">需要志工</option>
+            <option value="需要物資">需要物資</option>
+            <option value="提供洗澡點">提供洗澡點</option>
+            <option value="提供住宿點">提供住宿點</option>
+            <option value="其他">其他</option>
+        </select>
+    </div>
+    
+    <!-- Tutorial Overlay -->
+    <div id="tutorial-overlay">
+        <div id="tutorial-steps">
+            <h4 id="tutorial-title">步驟 1：選擇地點</h4>
+            <p id="tutorial-description">請在地圖上點擊您要回報的位置</p>
+        </div>
+    </div>
+    
+    <!-- Sidebar Toggle Button -->
+    <button id="sidebar-toggle" onclick="openSidebar()">
+        <i class="bi bi-list"></i> 圖層列表
+    </button>
+    
+    <!-- Sidebar Panel -->
+    <div id="sidebar">
+        <div class="sidebar-header">
+            <h5 style="margin: 0; padding-right: 35px;">救災資訊列表</h5>
+            <button class="sidebar-close" onclick="closeSidebar()" aria-label="關閉">
+                <i class="bi bi-x"></i>
+            </button>
+        </div>
+        <div class="sidebar-tabs">
+            <button class="sidebar-tab active" onclick="switchTab('submissions')" data-tab="submissions">
+                🆘 緊急需求
+            </button>
+            <button class="sidebar-tab" onclick="switchTab('submissions2')" data-tab="submissions2">
+                🏠 提供資源
+            </button>
+            <button class="sidebar-tab" onclick="switchTab('government')" data-tab="government">
+                🏛️ 政府設施
+            </button>
+            <button class="sidebar-tab" onclick="switchTab('targets')" data-tab="targets">
+                🎯 救災目標
+            </button>
+        </div>
+        <div class="sidebar-content">
+            <div id="submissions-pane" class="tab-pane active">
+                <div class="filter-container">
+                    <input type="text" class="filter-input" id="submissions-filter" placeholder="搜尋緊急需求..." onkeyup="filterDataList('submissions')">
+                    <button class="filter-clear" onclick="clearFilter('submissions')" title="清除搜尋">
+                        <i class="bi bi-x-circle"></i>
+                    </button>
+                </div>
+                <div class="list-counter">載入中...</div>
+                <ul class="data-list" id="submissions-list"></ul>
+            </div>
+            <div id="submissions2-pane" class="tab-pane">
+                <div class="filter-container">
+                    <input type="text" class="filter-input" id="submissions2-filter" placeholder="搜尋提供資源..." onkeyup="filterDataList('submissions2')">
+                    <button class="filter-clear" onclick="clearFilter('submissions2')" title="清除搜尋">
+                        <i class="bi bi-x-circle"></i>
+                    </button>
+                </div>
+                <div class="list-counter">載入中...</div>
+                <ul class="data-list" id="submissions2-list"></ul>
+            </div>
+            <div id="government-pane" class="tab-pane">
+                <div class="filter-container">
+                    <input type="text" class="filter-input" id="government-filter" placeholder="搜尋政府設施..." onkeyup="filterDataList('government')">
+                    <button class="filter-clear" onclick="clearFilter('government')" title="清除搜尋">
+                        <i class="bi bi-x-circle"></i>
+                    </button>
+                </div>
+                <div class="list-counter">載入中...</div>
+                <ul class="data-list" id="government-list"></ul>
+            </div>
+            <div id="targets-pane" class="tab-pane">
+                <div style="padding: 10px 10px 5px 10px;">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScLTif33-ans7aChSyWS9NYre10WnX7RbtH1hSbgD35DHTdHQ/viewform" 
+                       target="_blank" 
+                       class="btn btn-sm btn-primary w-100"
+                       style="text-decoration: none;">
+                        <i class="bi bi-pencil-square"></i> 協助通報
+                    </a>
+                </div>
+                <div class="filter-container">
+                    <input type="text" class="filter-input" id="targets-filter" placeholder="搜尋救災目標..." onkeyup="filterDataList('targets')">
+                    <button class="filter-clear" onclick="clearFilter('targets')" title="清除搜尋">
+                        <i class="bi bi-x-circle"></i>
+                    </button>
+                </div>
+                <div class="list-counter">載入中...</div>
+                <ul class="data-list" id="targets-list"></ul>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-light">
+        <div class="container-fluid">
+            <div class="row w-100">
+                <div class="col-md-8 mb-2 mb-md-0">
+                    <div class="btn-group">
+                        <button class="btn btn-outline-secondary" type="button" id="locate-me">
+                            <i class="bi bi-geo-alt"></i> 定位
+                        </button>
+                        <button class="btn btn-outline-secondary" type="button" id="input-coordinates">
+                            <i class="bi bi-geo"></i> 座標
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex justify-content-md-end align-items-center">
+                    <small class="text-muted me-2">
+                        <a href="https://facebook.com/k.olc.tw/" target="_blank" class="text-decoration-none">江明宗 製作</a>
+                    </small>
+                    <button id="tutorial-icon" class="btn btn-outline-info">
+                        <i class="bi bi-play-circle"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="tutorial-popup" class="tutorial-popup">
+        <span class="tutorial-closer" id="tutorial-closer">&times;</span>
+        <div id="tutorial-content">
+            <h5 class="mb-3">花蓮光復救災資訊地圖使用教學</h5>
+            <div class="mb-4">
+                <h6>地圖功能說明：</h6>
+                <ul>
+                    <li><strong>行政區域</strong>：點擊村里區域可查看行政資訊並填寫救災表單</li>
+                    <li><strong>救災標記</strong>：地圖上的彩色標記代表不同類型的救災資訊，採用群組顯示提升瀏覽效能</li>
+                    <li><strong>村里名稱</strong>：放大地圖至13倍以上可看到村里名稱標籤</li>
+                    <li><strong>自動分層</strong>：系統會根據救災資訊類型自動分層顯示，預設顯示緊急需求</li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <h6>資訊分層系統：</h6>
+                <ul>
+                    <li><strong>🆘 緊急需求</strong>：需要志工、需要物資等急迫性救災需求</li>
+                    <li><strong>🏠 提供資源</strong>：提供洗澡點、提供住宿點等資源協助</li>
+                    <li><strong>🏛️ 政府設施</strong>：避難所、收容所、便民服務站、餐食發放點</li>
+                    <li><strong>🎯 救災目標</strong>：清理進度追蹤，優先級分級管理（1級最優先）</li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <h6>救災標記圖例：</h6>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><span style="color: #007bff;">🙋</span> <strong>需要志工</strong> - 志工支援需求</li>
+                    <li><span style="color: #fd7e14;">📦</span> <strong>需要物資</strong> - 物資補給需求</li>
+                    <li><span style="color: #20c997;">🚿</span> <strong>提供洗澡點</strong> - 盥洗設施</li>
+                    <li><span style="color: #6f42c1;">🏠</span> <strong>提供住宿點</strong> - 臨時住宿</li>
+                    <li><span style="color: #6c757d;">❓</span> <strong>其他</strong> - 其他救災資訊</li>
+                    <li><span style="color: #198754;">🍱</span> <strong>餐食發放</strong> - 政府提供餐食服務</li>
+                </ul>
+                <h6 style="margin-top: 15px;">救災目標優先級：</h6>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><span style="background-color: #cf6e69; color: white; padding: 2px 6px; border-radius: 50%; font-size: 11px; font-weight: bold;">1</span> <strong>1級-2級</strong> - 最高優先（急需協助）</li>
+                    <li><span style="background-color: #d8964b; color: white; padding: 2px 6px; border-radius: 50%; font-size: 11px; font-weight: bold;">3</span> <strong>3級</strong> - 中高優先</li>
+                    <li><span style="background-color: #e7c451; color: white; padding: 2px 6px; border-radius: 50%; font-size: 11px; font-weight: bold;">4</span> <strong>4級</strong> - 中優先</li>
+                    <li><span style="background-color: #9dc285; color: white; padding: 2px 6px; border-radius: 50%; font-size: 11px; font-weight: bold;">5</span> <strong>5級</strong> - 低優先</li>
+                    <li><span style="background-color: #7fa6d7; color: white; padding: 2px 6px; border-radius: 50%; font-size: 11px; font-weight: bold;">6</span> <strong>6級</strong> - 最低優先（已清理完成）</li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <h6>智慧導航功能：</h6>
+                <ul>
+                    <li><strong>URL分享</strong>：複製網址可直接分享特定救災資訊給他人</li>
+                    <li><strong>自動切換</strong>：點擊分享連結時系統會自動切換到正確分層並定位到該資訊</li>
+                    <li><strong>群組展開</strong>：被群組的標記會自動展開並顯示目標資訊</li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <h6>操作說明：</h6>
+                <ul>
+                    <li><strong>定位</strong>：點擊「定位」按鈕找到您的當前位置</li>
+                    <li><strong>座標跳轉</strong>：點擊「座標」按鈕輸入經緯度跳轉到特定位置</li>
+                    <li><strong>分層切換</strong>：點擊上方分頁標籤切換不同類型的救災資訊</li>
+                    <li><strong>搜尋過濾</strong>：在搜尋框輸入關鍵字過濾各層級的標記資訊</li>
+                    <li><strong>填寫表單</strong>：點擊村里區域後可填寫救災資訊表單</li>
+                    <li><strong>清單導航</strong>：點擊右側列表中的任一項目可快速定位到地圖上對應標記</li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <h6>資料來源：</h6>
+                <ul>
+                    <li><strong>救災目標</strong>：來源自 <a href="https://docs.google.com/spreadsheets/d/1s-6z7kqsRLUEsmetdquoBDbZugwYmHiRKYeWCdc-gP4/edit" target="_blank" class="text-decoration-none">Google 試算表</a>，包含清理進度、泥沙淤積狀況、廢棄家具移除等詳細資訊</li>
+                    <li><strong>通報資訊</strong>：透過表單即時收集的救災需求與資源提供資訊</li>
+                    <li><strong>政府設施</strong>：官方提供的避難所、便民服務站、餐食發放點等資料</li>
+                </ul>
+            </div>
+            <div class="alert alert-info">
+                <strong>提醒：</strong>此地圖即時顯示透過表單提交的救災資訊，採用智慧分層與群組技術優化顯示效能，並支援精確定位與資訊分享功能，協助災區資源協調與需求媒合。救災目標採用1-6級優先分級制度，數字越小表示越需要協助。
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="coordinatesModal" tabindex="-1" aria-labelledby="coordinatesModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="coordinatesModalLabel">輸入座標</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="coordinatesInput" class="form-label">座標 (緯度,經度)</label>
+                        <input type="text" class="form-control" id="coordinatesInput" placeholder="例如: 23.123456,120.123456">
+                    </div>
+                    <div class="mb-3">
+                        <label for="latitude" class="form-label">緯度</label>
+                        <input type="number" class="form-control" id="latitude" step="any" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="longitude" class="form-label">經度</label>
+                        <input type="number" class="form-control" id="longitude" step="any" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="zoomToCoordinates">確定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,3427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>花蓮光復 災區內 詳細攻略</name>
+    <description><![CDATA[花蓮光復｜馬太鞍溪堰塞湖 救援資料<br>https://astonishing-silene-4d4.notion.site/27835873c2bf80efa675ca874d2bb817?source=copy_link]]></description>
+    <Style id="icon-1577-9C27B0-normal">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1577-9C27B0-highlight">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1577-9C27B0">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1577-9C27B0-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1577-9C27B0-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1577-9C27B0-nodesc-normal">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1577-9C27B0-nodesc-highlight">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1577-9C27B0-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1577-9C27B0-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1577-9C27B0-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1577-F9A825-normal">
+      <IconStyle>
+        <color>ff25a8f9</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1577-F9A825-highlight">
+      <IconStyle>
+        <color>ff25a8f9</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1577-F9A825">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1577-F9A825-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1577-F9A825-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1577-F9A825-labelson">
+      <IconStyle>
+        <color>ff25a8f9</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="icon-1603-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1603-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1603-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1603-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1603-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1603-880E4F-normal">
+      <IconStyle>
+        <color>ff4f0e88</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1603-880E4F-highlight">
+      <IconStyle>
+        <color>ff4f0e88</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1603-880E4F">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1603-880E4F-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1603-880E4F-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1603-9C27B0-normal">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1603-9C27B0-highlight">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1603-9C27B0">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1603-9C27B0-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1603-9C27B0-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1603-C2185B-normal">
+      <IconStyle>
+        <color>ff5b18c2</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1603-C2185B-highlight">
+      <IconStyle>
+        <color>ff5b18c2</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1603-C2185B">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1603-C2185B-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1603-C2185B-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1603-F9A825-labelson">
+      <IconStyle>
+        <color>ff25a8f9</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="icon-1603-FBC02D-normal">
+      <IconStyle>
+        <color>ff2dc0fb</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1603-FBC02D-highlight">
+      <IconStyle>
+        <color>ff2dc0fb</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1603-FBC02D">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1603-FBC02D-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1603-FBC02D-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1696-880E4F-normal">
+      <IconStyle>
+        <color>ff4f0e88</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1696-880E4F-highlight">
+      <IconStyle>
+        <color>ff4f0e88</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1696-880E4F">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1696-880E4F-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1696-880E4F-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1696-C2185B-normal">
+      <IconStyle>
+        <color>ff5b18c2</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1696-C2185B-highlight">
+      <IconStyle>
+        <color>ff5b18c2</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1696-C2185B">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1696-C2185B-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1696-C2185B-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1769-757575-normal">
+      <IconStyle>
+        <color>ff757575</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1769-757575-highlight">
+      <IconStyle>
+        <color>ff757575</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1769-757575">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1769-757575-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1769-757575-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1855-E65100-normal">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1855-E65100-highlight">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1855-E65100">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1855-E65100-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1855-E65100-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1855-FF5252-normal">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1855-FF5252-highlight">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1855-FF5252">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1855-FF5252-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1855-FF5252-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1898-C2185B-labelson">
+      <IconStyle>
+        <color>ff5b18c2</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-0288D1-labelson-nodesc">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-757575-normal">
+      <IconStyle>
+        <color>ff757575</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-757575-highlight">
+      <IconStyle>
+        <color>ff757575</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-757575">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-757575-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-757575-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-C2185B-normal">
+      <IconStyle>
+        <color>ff5b18c2</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-C2185B-highlight">
+      <IconStyle>
+        <color>ff5b18c2</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-C2185B">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-C2185B-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-C2185B-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0288D1-4273-nodesc-normal">
+      <LineStyle>
+        <color>ffd18802</color>
+        <width>4.273</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-0288D1-4273-nodesc-highlight">
+      <LineStyle>
+        <color>ffd18802</color>
+        <width>6.4095</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-0288D1-4273-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0288D1-4273-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0288D1-4273-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-A1C2FA-17752-normal">
+      <LineStyle>
+        <color>fffac2a1</color>
+        <width>17.752</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-A1C2FA-17752-highlight">
+      <LineStyle>
+        <color>fffac2a1</color>
+        <width>26.628</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-A1C2FA-17752">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-A1C2FA-17752-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-A1C2FA-17752-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-E65100-7932-normal">
+      <LineStyle>
+        <color>ff0051e6</color>
+        <width>7.932</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-E65100-7932-highlight">
+      <LineStyle>
+        <color>ff0051e6</color>
+        <width>11.898</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-E65100-7932">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-E65100-7932-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-E65100-7932-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-FBC02D-4466-normal">
+      <LineStyle>
+        <color>ff2dc0fb</color>
+        <width>4.466</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-FBC02D-4466-highlight">
+      <LineStyle>
+        <color>ff2dc0fb</color>
+        <width>6.699</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-FBC02D-4466">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-FBC02D-4466-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-FBC02D-4466-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-FF5252-11783-normal">
+      <LineStyle>
+        <color>ff5252ff</color>
+        <width>11.783</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-FF5252-11783-highlight">
+      <LineStyle>
+        <color>ff5252ff</color>
+        <width>17.6745</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-FF5252-11783">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-FF5252-11783-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-FF5252-11783-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-FF5252-22119-normal">
+      <LineStyle>
+        <color>ff5252ff</color>
+        <width>22.119</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-FF5252-22119-highlight">
+      <LineStyle>
+        <color>ff5252ff</color>
+        <width>33.1785</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-FF5252-22119">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-FF5252-22119-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-FF5252-22119-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-000000-1200-28-normal">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>1c000000</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="poly-000000-1200-28-highlight">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>1c000000</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="poly-000000-1200-28">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-000000-1200-28-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-000000-1200-28-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-000000-1200-31-normal">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>1f000000</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="poly-000000-1200-31-highlight">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>1f000000</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="poly-000000-1200-31">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-000000-1200-31-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-000000-1200-31-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-000000-1200-36-normal">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>24000000</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="poly-000000-1200-36-highlight">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>24000000</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="poly-000000-1200-36">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-000000-1200-36-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-000000-1200-36-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-000000-1200-38-normal">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>26000000</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="poly-000000-1200-38-highlight">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>26000000</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="poly-000000-1200-38">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-000000-1200-38-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-000000-1200-38-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-000000-1200-77-normal">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4d000000</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="poly-000000-1200-77-highlight">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4d000000</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="poly-000000-1200-77">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-000000-1200-77-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-000000-1200-77-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-000000-1901-43-normal">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.901</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>2b000000</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="poly-000000-1901-43-highlight">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>2.8515</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>2b000000</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="poly-000000-1901-43">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-000000-1901-43-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-000000-1901-43-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-000000-2701-23-normal">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>2.701</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>17000000</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="poly-000000-2701-23-highlight">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>4.0515</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>17000000</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="poly-000000-2701-23">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-000000-2701-23-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-000000-2701-23-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-0F9D58-1200-77-normal">
+      <LineStyle>
+        <color>ff589d0f</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4d589d0f</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="poly-0F9D58-1200-77-highlight">
+      <LineStyle>
+        <color>ff589d0f</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4d589d0f</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="poly-0F9D58-1200-77">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-0F9D58-1200-77-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-0F9D58-1200-77-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-7CB342-1200-77-normal">
+      <LineStyle>
+        <color>ff42b37c</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4d42b37c</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="poly-7CB342-1200-77-highlight">
+      <LineStyle>
+        <color>ff42b37c</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4d42b37c</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="poly-7CB342-1200-77">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-7CB342-1200-77-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-7CB342-1200-77-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-880E4F-1200-77-normal">
+      <LineStyle>
+        <color>ff4f0e88</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4d4f0e88</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="poly-880E4F-1200-77-highlight">
+      <LineStyle>
+        <color>ff4f0e88</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4d4f0e88</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="poly-880E4F-1200-77">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-880E4F-1200-77-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-880E4F-1200-77-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-C2185B-1200-28-nodesc-normal">
+      <LineStyle>
+        <color>ff5b18c2</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>1c5b18c2</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-C2185B-1200-28-nodesc-highlight">
+      <LineStyle>
+        <color>ff5b18c2</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>1c5b18c2</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-C2185B-1200-28-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-C2185B-1200-28-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-C2185B-1200-28-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-C2185B-1200-66-nodesc-normal">
+      <LineStyle>
+        <color>ff5b18c2</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>425b18c2</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-C2185B-1200-66-nodesc-highlight">
+      <LineStyle>
+        <color>ff5b18c2</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>425b18c2</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-C2185B-1200-66-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-C2185B-1200-66-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-C2185B-1200-66-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-C2185B-1200-77-nodesc-normal">
+      <LineStyle>
+        <color>ff5b18c2</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4d5b18c2</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-C2185B-1200-77-nodesc-highlight">
+      <LineStyle>
+        <color>ff5b18c2</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4d5b18c2</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-C2185B-1200-77-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-C2185B-1200-77-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-C2185B-1200-77-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-F48FB1-1200-59-normal">
+      <LineStyle>
+        <color>ffb18ff4</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>3bb18ff4</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="poly-F48FB1-1200-59-highlight">
+      <LineStyle>
+        <color>ffb18ff4</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>3bb18ff4</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="poly-F48FB1-1200-59">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-F48FB1-1200-59-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-F48FB1-1200-59-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>災區｜清污泥</name>
+      <Placemark>
+        <name>(失聯) 大平村 武昌街107號 (失聯) ｜70多歲的部落阿公</name>
+        <description><![CDATA[👉 武昌街107號 (失聯) 70多歲的部落阿公<br>https://www.threads.com/@limbusva/post/DO_Xys7kqRp?xmt=AQF03GRaq-0QgUzZYZxJPwT0dxAyyJiEKhavTS8o05xU0g&slof=1]]></description>
+        <styleUrl>#icon-1696-880E4F</styleUrl>
+        <Point>
+          <coordinates>
+            121.42956,23.6719158,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大平村 武昌街3號｜清污泥 </name>
+        <description><![CDATA[9/26 22:00<br>🆘誠徵救災志工🆘<br>📌光復鄉大平村武昌街3號&5號<br>我們在佛祖街和武昌街的T字路口大米廠旁<br>5號是隔壁一位獨居阿嬤（暫已撤離）<br>所以需要非常非常大量的人力來恢復家園<br>請有意願協助的志工穿著雨鞋、攜帶鏟子來<br>#如果有土水車也非常需要!!!!<br>我們預計9/27 08:00開始動工內部鏟土<br>希望看到的人可以分享出去<br>如果你有意願也請在下面留言<br>以便我們確認有多少人力能支援🥹<br>請幫忙擴散🙏🏽拜託了<br><br>https://www.threads.com/@ru.922/post/DPEao6_icUL?xmt=AQF0qEVOCP_nggfTl-qV0vM9RER3HWOdOpSF81SuDkX7XQ&slof=1]]></description>
+        <styleUrl>#icon-1855-FF5252</styleUrl>
+        <Point>
+          <coordinates>
+            121.4343822,23.6701113,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大平村 武昌街3號 污泥 </name>
+        <description>大平村 武昌街3號 污泥</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4343715,23.6701113,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大同村 中學街75巷1弄 污泥 整條</name>
+        <description><![CDATA[大同村 中學街75巷1弄 污泥 整條<br><br>除理污泥, 運送物資<br><br>＠alice.wu610 提供<br>_zhang_sin網友 9/28 13:12填報<br><br>這23.6701554, 121.4285189<br>https://maps.app.goo.gl/ATfdyZjoMqAjEjEh8<br><br>https://www.threads.com/@alice.wu610/post/DPIPxcPk7kY?xmt=AQF0Zs0uoxXuM1f5REWbV-YhLIF40FoEndaqJCIz69dK9g&slof=1]]></description>
+        <styleUrl>#line-FF5252-22119</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            121.4281851,23.6703282,0
+            121.4286733,23.6700973,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>大同村 學士街160巷1弄12號 污泥</name>
+        <description><![CDATA[大同村 學士街160巷1弄12號 污泥<br><br>2025/9/28 上午 10:38:02 大同村	學士街160巷1弄5號	除理污泥	臉書（劉繼馨）	親屬（留的資料是受災戶本人的）		未完成       ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4286433,23.6696264,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大馬村 林森路238號 缺小怪手、山貓</name>
+        <description><![CDATA[大馬村 林森路238號 缺小怪手、山貓<br><br><br>2025/9/28 下午 12:33:00  大馬村	林森路238號	小怪手、山貓	Threads: amylin97027 	家屬	https://www.threads.com/@amylin97027/post/DPITSnXjz6N?xmt=AQF0L5n3-UBf833hxXLempDLnhcUxsG2fHB0HC21sAnPDw&slof=1	未完成	976花蓮縣光復鄉林森路238號      ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4241728,23.6712783,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>西富村 中正路二段56號 污泥</name>
+        <description><![CDATA[西富村 中正路二段56號 污泥<br><br>9/28 這裏需要人手，我們只有三個人…拜託幫忙<br><br>https://www.threads.com/@peiwenlee720/post/DPISGXTgY5D?xmt=AQF0DNpFVer4ZfxjTKt_xh4wNxiijs2SAIyr3zobZeGWNw&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4490516,23.659097,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大同村 中學街75巷1弄5號 污泥</name>
+        <description><![CDATA[光復鄉大同村中學街75巷1弄5號<br><br><br>https://www.threads.com/@ting5509/post/DPGNzqhk9O1<br><br>2025/9/27 下午 4:36:23 大同村	中學街75巷1弄5號 確認地圖 map找不到	除理污泥	@ting5509(脆）	本人    ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.428745,23.6703614,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大同村 中學街75巷1弄 污泥 整條</name>
+        <description><![CDATA[大同村 中學街75巷1弄 污泥 整條<br><br>中學街75巷1弄13號 住戶需要協助 9/29更新<br><br>23.6701554, 121.4285189<br>＠alice.wu610 提供<br>這23.6701554, 121.4285189<br>https://maps.app.goo.gl/ATfdyZjoMqAjEjEh8<br><br>https://www.threads.com/@alice.wu610/post/DPIPxcPk7kY?xmt=AQF0Zs0uoxXuM1f5REWbV-YhLIF40FoEndaqJCIz69dK9g&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4285189,23.6701554,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大華村 光復第一市場 污泥</name>
+        <description><![CDATA[中山路二段284巷2號 光復第一市場<br><br>9/28/2025 9:43:52	陳坤毅	大華村	中山路二段284巷2號 光復第一市場 	除理污泥	脆：陳坤毅（@andykunyi)	家屬	https://www.threads.com/@andykunyi/post/DPIIPjvk5aw?xmt=AQF0Jpl6Cg6KMZgkDFafUUUO_mZOlpMf_9f_VWl9qya3Wg&slof=1	未完成       <br> ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.424618,23.6661616,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大安村 中正路一段8號 污泥</name>
+        <description><![CDATA[大安村 中正路一段8號 污泥<br><br>大安村 中正路一段8號 污泥<br>https://www.threads.com/@rip1688/post/DPGAa2Fk5d2?xmt=AQF0Watl4Q2ghoEoE7xjbPsTOTU3pHXZfyRwYuWVARFmQQ&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4218114,23.6661265,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大同村 中學街75巷2弄19號 污泥</name>
+        <description><![CDATA[大同村 中學街75巷2弄19號 污泥<br><br>除理污泥, 重型機具支援、怪手、山貓 ....等	Han.fixer	親友]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4280994,23.6700343,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大同村 敦厚路42號 污泥</name>
+        <description><![CDATA[大同村 敦厚路42號 污泥 <br><br>2025/9/28 上午 9:43:54	鄧小姐	大同村	敦厚路42號	除理污泥, 缺人！	ytapstypah	網友	https://www.threads.com/@mosquito9150/post/DPICDh9k8pi?xmt=AQF0RH2QzMkD77yIkwsxZH34NSshf7UYr5yYhn18IxQOOw&slof=1        ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4260491,23.6662332,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大華村 林森路215號 淤泥</name>
+        <description><![CDATA[大華村 林森路215號 淤泥<br><br>2025/9/28 上午 10:56:04	Jc	光復鄉	林森路215號	除理污泥	脆 jc_in_	網友	https://www.threads.com/@empower_lung/post/DPIR0htiZUw?xmt=AQF0AR3cAL-vIk5JgbOo9umK9qpmHriVbgwo7qQrqFAN8w&slof=1	未完成       ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4239652,23.6710759,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大同村 中學街8號 淤泥</name>
+        <description>大同村 中學街254巷8號</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4290426,23.6705366,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大華村 中興路580號 淤泥</name>
+        <description><![CDATA[大華村 中興路580號 淤泥<br><br>976花蓮縣光復鄉中興路580號	除理污泥, 協助關懷	ytapstypah	網友	https://www.threads.com/@chi__chi_77/post/DPF1HcMjyjQ?xmt=AQF0phwkeWhkPX4R-_b5ioEDuOZuc5QA_HU5zBXp6PqzIA&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.42309,23.6705224,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>東富村 東富路2號｜清污泥</name>
+        <description><![CDATA[光復鄉東富村東富路28巷2號<br>影片的1分半 擋不住錄影前的一句 <br>👴：你可以幫幫我嗎⋯⋯<br><br>地點：光復鄉東富村東富路28巷2號<br>需要支援人力😭😭😭😭<br>—<br>東富村｜黃建桐村長 0910-273519<br>西富村｜劉貴滿. 0910-609136<br>🔺 1.阿陶莫.阿托莫 Atomo｜東富村<br>🔺 4.加里洞 Kalotong｜東富村<br>🔺 3.太巴塱 Tafalong｜東富村<br> 黃建桐村長　0910-273-519<br> 鄭敏芳　　　0988-126-744<br><br><br>—<br>https://www.threads.com/@qqeffie/post/DPDPQdmkg3R?xmt=AQF0cCPpFvJ351VNzgZ8rrCmCtZNtBvn0Lb7IdSpGG674Q&slof=1<br>—<br>https://www.threads.com/@chieftain_fish/post/DPA8Kgfk6BW?xmt=AQF0SWyNYUS2VaJ4zAm79uO7sxJ5lIP3Ueb-6wDZkv2kig&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4648464,23.6674729,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大華村 林森路183號｜清淤泥 許小姐</name>
+        <description><![CDATA[地址：花蓮縣光復鄉大華村林森路183號<br>聯繫人：許小姐 0921097655<br><br><br>⚠️光復長照中心急需幫忙清除淤泥<br><br>#求援 我們是光復唯一一間住宿式長照中心<br>中心全數的長輩皆於9/22(一)全數撤離至壽豐的安置地點<br><br>現階段除了需要繼續在安置地點繼續作業<br>同時也要恢復中心的環境，<br>因泥土量太重、太多<br>光靠人手下去挖需耗時許久<br>我們除了急需要人手，也真的非常需要大型機具<br><br>所需資源：<br>1、人力10-15位<br>2、小山貓<br>3、小怪手<br><br>地址：花蓮縣光復鄉大華村林森路183號<br>聯繫人：許小姐 0921097655<br><br>希望能早點讓光復的長輩回家<br><br>https://www.threads.com/@joyann.kk/post/DPEbnKOk5YX?xmt=AQF0x3Aqnqojph7u4BPjz_EX41EfBBhETFpAzTYIfryfIg&slof=1<br><br>---<br>9/28/2025 15:31:43 網友<br>https://www.threads.com/@with_ginfa/post/DPGQuVvk8FW?xmt=AQF0DCL7EoDPLT3vDEaCq3Ux252-tqLX6BF7wGHHlurQfQ&slof=1]]></description>
+        <styleUrl>#icon-1855-E65100</styleUrl>
+        <Point>
+          <coordinates>
+            121.4249215,23.6697771,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大華村 林森路225號｜清污泥</name>
+        <description><![CDATA[地址：花蓮縣光復鄉大華村林森路225號<br>屋主：陳先生 0976576396<br><br>有沒有人有辦法借到大型機具 <br>幫這戶人家清理😢😢😢<br>淤泥位置在膝蓋處 泥沙非常硬<br>我只有一雙手 希望能藉由網路力量<br>號召更多人前來幫忙<br>拜託大家了謝謝🙏🏻🥺<br><br>地址：花蓮縣光復鄉大華村林森路225號<br>屋主：陳先生 0976576396<br><br>https://www.threads.com/@_dec.18/post/DPEfLxVAd7E?xmt=AQF0P3ENpZlKnq-qU8HtzOz-YsUzIdQrSbkHCKi44sbtaw&slof=1]]></description>
+        <styleUrl>#icon-1855-E65100</styleUrl>
+        <Point>
+          <coordinates>
+            121.4238064,23.6713233,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>台9線｜清污泥 脆 @_abbie.7_ 小姐</name>
+        <description><![CDATA[拜託大家可以來我家這排房子挖泥～目前兩老都沒有見過陌生面孔前來，出光復車站後左轉直走，非常需要人力🙏出車站左轉！左轉直直走，工具都有只缺力量，拜託大家🥹<br><br>https://www.threads.com/@_abbie.7_/post/DPDEUJrgZZm?xmt=AQF00dPvhHCZgDhzMZaf4vMYE96XQEzX7DSS6PmWCPLaRg&slof=1]]></description>
+        <styleUrl>#line-FF5252-11783</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            121.4231985,23.6717566,0
+            121.4224474,23.668541,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>大同村 林森路15號 清污泥</name>
+        <description><![CDATA[大同村 林森路294巷15號<br><br><br>光復鄉林森路294巷15號<br>阿公家這裡非常需要人來幫忙🙏🙏<br>https://www.threads.com/@______p70/post/DPGEVrGAFpx?xmt=AQF0Tp0YNYnfPWP7H043RuqU56fqenNRCalRtS10XWHOmg&slof=1 ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4283606,23.6646196,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大華村 中興路598號 污泥</name>
+        <description><![CDATA[大華村 中興路598號 污泥<br><br>大華村 中興路598號 污泥<br><br>https://www.threads.com/@_abbie.7_/post/DPFu1nrEU45?xmt=AQF0ZYTZxwNRIMhudjB4Ox9PBBeLOvMe7D6Je2Trpdij2Q&slof=1<br><br><br>https://www.threads.com/@kk12100529/post/DPFx8jWiWtI?xmt=AQF0weiFbW29MfOR30t0ZtfVdMP61i6XgT84j4VBJMUjJw&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4231562,23.670857,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>北富村 富田二街86號 污泥</name>
+        <description><![CDATA[9/27/2025 17:07:35	<br>鄧小姐	北富村	976花蓮縣光復鄉富田二街86號	除理污泥, 運送物資, 協助關懷, 重型機具支援、怪手、山貓 ....等, 文中原po說：成人紙尿褲、食物、清理工具，缺乏人力，山貓機不足。	ytapstypah	網友	https://www.threads.com/@osh.ywanc/post/DPGJfERAbGS?xmt=AQF0zHxzgMtLxcWwD2usrmbdL2RQEamvaRQjSeakUpocyg&slof=1 ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4518589,23.6601897,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大同村 中山路三段26號 污泥</name>
+        <description><![CDATA[9/27/2025 16:48:06	鄧小姐	<br>大同村	976花蓮縣光復鄉中山路三段26號	除理污泥, 詳細要問原文在現場這位，就影片來看只說需要人手清理+搬運東西	<br><br><br>ytapstypah	網友	https://www.threads.com/@0406joanna/post/DPGJ2EYjxg0?xmt=AQF0gneE0Thu-1_828xfXsb5RLXEe9CglN59fV_lf0HAew&slof=1        ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4257046,23.6697355,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大華村 中華路256號 淤泥</name>
+        <description><![CDATA[大華村 中華路256巷9弄2號1樓<br><br>9/28/2025 9:19:44	林慧彣	大華村	中華路256巷9弄2號1樓	除理污泥	(脆)candy_11481	家屬		未完成       ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4234059,23.6682614,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大華村 大華街7號 污泥</name>
+        <description><![CDATA[大華村 大華街7號 污泥<br><br>9/28/2025 9:37:20	鄧小姐	大華村	大華街7巷7號	除理污泥, 我是網友看到先幫忙填寫，詳細要問現場	ytapstypah	網友	https://www.threads.com/@luo81087/post/DPIAnvMkh86?xmt=AQF0ulQ_EHFa9MvSftUMwxi7old4duG-VUAoC0o-n8YspA&slof=1        ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.6058417,24.0416154,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大華村 敦厚路69號 污泥</name>
+        <description><![CDATA[大華村 敦厚路69號 污泥<br><br>賴ID：evp77777	家屬<br><br>2025/9/28 上午 11:00:39	JC	大華村	敦厚路69、71號	"除理污泥 協助挖土<br>小張：0906517386"	脆 kaiii._.039	網友	https://www.threads.com/@kaiii._.039/post/DPIMvJxj3Pv?xmt=AQF09Uzrtm081cpCgonggoFTuJ3WuO9SydgPn43wrsWnvw&slof=1	未完成    <br><br>   https://www.threads.com/@kaiii._.039/post/DPIMvJxj3Pv?xmt=AQF0M8UdsI7Vdog1N1gPTlQDzneMdWkX7n09XAZ9ilK3XQ&slof=1<br><br>https://www.threads.com/@february__seventeen/post/DPIOF5aj8qW?xmt=AQF00jl1FZoeV-_FLBxbHZv7xZFD3Vu1WyDCFYVHOsQcFA&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4262014,23.6670216,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大華村 敦厚路71號 污泥</name>
+        <description><![CDATA[大華村 敦厚路69號 污泥<br><br>賴ID：evp77777 家屬<br><br>2025/9/28 上午 11:00:39 JC 大華村 敦厚路69、71號 "除理污泥 協助挖土<br>小張：0906517386" 脆 kaiii._.039 網友 https://www.threads.com/@kaiii._.039/post/DPIMvJxj3Pv?xmt=AQF09Uzrtm081cpCgonggoFTuJ3WuO9SydgPn43wrsWnvw&slof=1 未完成 <br><br> https://www.threads.com/@kaiii._.039/post/DPIMvJxj3Pv?xmt=AQF0M8UdsI7Vdog1N1gPTlQDzneMdWkX7n09XAZ9ilK3XQ&slof=1<br><br>https://www.threads.com/@february__seventeen/post/DPIOF5aj8qW?xmt=AQF00jl1FZoeV-_FLBxbHZv7xZFD3Vu1WyDCFYVHOsQcFA&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4262348,23.6670535,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大平村 武昌街143號 淤泥</name>
+        <description><![CDATA[大平村 武昌街143號 淤泥<br><br>需要人手！這邊志工很少，<br>請大家幫忙移動到這邊！！！<br><br>座標：花蓮縣光復鄉武昌街143號<br>光復火車站走17分鐘可以到<br><br>https://www.threads.com/@ysy137823/post/DPIXuE1ktTN?xmt=AQF07t89TNd8yAlhlQEk9yxvc1nwZ6SZk8lEL79VgKQtJg&slof=1<br>--<br>9/28/2025 13:05:46 <br>網友9/28 13:05填<br>脆_zhang_sin]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4277047,23.6726046,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大華村 中華路362巷3號 清污泥 整理家園</name>
+        <description><![CDATA[大華村 中華路362巷3號 清污泥 整理家園<br>--<br>祈求後續進駐志工 10/3-5號<br>鄉公所前面 電力公司後面巷子底<br>光復鄉中華路362巷3號<br>--<br>因為他的家 目前災後第六天 <br>還無力進入家中<br>就算進去也無法ㄧ人完成<br>--<br>土泥、汽車、垃圾沖往住家巷內<br>27號才有山貓怪手開始挖<br>27號那波撤離身體不舒服去醫院休息<br>所以都還沒辦法進到屋子裡清掃<br>---<br>求擴散求擴散求擴散<br>國小老師60多歲<br>928是他的生日<br>927還沒有辦法進家裡<br>一輩子奉獻教育<br>沒有結婚<br>光復無人不曉王師<br><br>https://www.threads.com/@j.my.u_/post/DPJIat3EjB4?xmt=AQF0C-kYjRxT3ET5Z1zwETpurkneJyxzfLZXqp5zm_IrsQ&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4242448,23.6692326,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大華村 中華路301巷22號｜遺失 insta360x4</name>
+        <description><![CDATA[遺失 insta360x4<br>有沒有人<br>撿到一台黑色的相機<br>型號insta360x4<br><br>失主<br>https://www.threads.com/@mimi_aesthetics.p/post/DPIuiO2AXPh?xmt=AQF0bd4yCRS8gleuLdIN-7EW_wtPxWLOQyssUi8J30E2Rg&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4235128,23.6702404,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大平村 中學街90巷12號 清污泥（方圓約1.5公里範圍）</name>
+        <description><![CDATA[大平村 中學街90巷12號 清污泥<br>（方圓約1.5公里範圍）<br><br><br>9/28/2025 13:25:48   大平村	中學街90巷12號（方圓約1.5公里範圍）	除理污泥, 協助關懷, 重型機具支援、怪手、山貓 ....等	脆，林綠荼 ，是（ㄊㄨˊ）	志工		未完成	https://maps.app.goo.gl/rQWNkVWeKpcdJVr59      ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4287642,23.6712129,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大安村 中山路二段2號</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.420763,23.6610946,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大安村 中山路二段56號 清污泥 送物資</name>
+        <description>9/28/2025 13:08:20	張文馨 脆網友	大安村	中山路二段56號	除理污泥, 運送物資	_zhang_sin	網友 13:05 （9/28）填報         </description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4217985,23.6618803,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大華村 光復路35號 沒便當🍱</name>
+        <description><![CDATA[大華村 光復路35號 沒便當🍱<br><br>_zhang_sin<br>9/28/2025 13:15:33]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4241436,23.6686176,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大華村 光華街60號 物資 便當</name>
+        <description><![CDATA[大華村 光華街60號 物資 便當<br><br>9/28/2025 13:38:53	張文馨	大華村	光華街60號	運送物資, 需要愛心便當！	_zhang_sin脆 13:38（9/28）	網友 9/28 13:38         ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4254491,23.6673283,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大同村 學士街160巷15號 清污泥</name>
+        <description><![CDATA[大同村 學士街160巷15號 清污泥<br><br>9/28/2025 15:02:55<br>https://www.threads.com/@_l2108/post/DPIsMK_koaI?xmt=AQF0WAY1b7wWELrhUK68GfWGupdqEPh6O7ORc47Put-YbA&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4289867,23.669717,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大華村 中山路二段304號 清污泥</name>
+        <description><![CDATA[大華村 中山路二段304號 清污泥<br><br>https://maps.app.goo.gl/f21jRBqswNusXKKR7?g_st=com.google.maps.preview.copy]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4242307,23.6668405,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大同村 敦厚路6號 清污泥</name>
+        <description><![CDATA[大同村 敦厚路6號 清污泥<br>楊小姐<br><br><br>9/28/2025 16:02:56 <br>https://www.threads.com/@xe77/post/DPH8L3IkgoF?xmt=AQF0WUIhPqyqZN5UIQFjnV02JnFYFPprJ34n6Ahnkj5e_A&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4256839,23.665331,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大同村 中山路三段40號 清污泥 需要推車</name>
+        <description><![CDATA[除理污泥, 需要推車<br><br><br>網友 9/28/2025 16:23:23<br>https://www.threads.com/@chibiluvcats/post/DPIiJ6tEv_b?xmt=AQF0gprG0SphQt5Egkv7egdsWUxcOUytKp3QlCmpKFc_pQ&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4259358,23.670216,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大馬村 成功街409號 (獨居) 清污泥 重型機具支援、怪手、山貓 ....等</name>
+        <description><![CDATA[除理污泥, 重型機具支援、怪手、山貓 ....等<br><br>網友 9/28/2025 16:26:58<br>https://maps.app.goo.gl/1ZM2oriHjZqBwpVA7?g_st=com.google.maps.preview.copy]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4203133,23.6809091,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中山路二段227號</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4236955,23.6660526,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大華村 光復路39號 清淤泥</name>
+        <description><![CDATA[大華村 光復路39號 清淤泥<br><br><br>9/29 11:06<br>https://www.threads.com/@kelvin71235/post/DPKs6OOD0za?xmt=AQF0gqSjhMhIn3RJYZEpGfzuoeckr6k1p0EuNFF73QiDfw&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4239904,23.6686828,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大平村 佛祖街112號 清污泥</name>
+        <description><![CDATA[大平村 佛祖街112號 清污泥<br><br>9/29 12:00<br>https://www.threads.com/@lisin_0726/post/DPKwKHwEvT4?xmt=AQF0AkLnnT97l0Fwhql6ys0xp4X42jhu-qT64BR2qm0ZQA&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4336826,23.6668188,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大馬村 武昌街290號 清污泥</name>
+        <description><![CDATA[大馬村 武昌街290號 清污泥<br><br>9/29<br>https://www.threads.com/@an____0108/post/DPKrzBKkwq7?xmt=AQF0zsCUoOE4G0eSkRiXUoOkDG1FO3sZJj2c2PeWNCnfvQ&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4242013,23.6735375,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大安村 中山路二段230號 清污泥</name>
+        <description>中山路二段230號 清污泥</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4234456,23.6652299,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>災區｜已完成 部分</name>
+      <Placemark>
+        <name>大同村 敦厚路135巷 (已完成)除理污泥, 重型機具支援、怪手、山貓 ....等</name>
+        <description><![CDATA[大同村敦厚路135巷 (已完成)除理污泥, 重型機具支援、怪手、山貓 ....等<br><br>9/29/2025 5:10:17  大同村	大同村敦厚路135巷	除理污泥, 重型機具支援、怪手、山貓 ....等	jin07301231@gmail.com	志工		已完成       ]]></description>
+        <styleUrl>#line-A1C2FA-17752</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            121.4265013,23.6699851,0
+            121.4262304,23.6692972,0
+            121.4262089,23.669199,0
+            121.4262787,23.6691547,0
+            121.426512,23.6690393,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>大安村 中正路一段286號(完成) 膝蓋痛 接走</name>
+        <description><![CDATA[大安村 中正路一段286號(完成) 膝蓋痛 接走<br><br>這裡有一個獨居老爺爺約80+<br>腳受傷膝蓋痛，請問可以通報那個單位協助安置？<br><br>這個地點較低窪<br>所以災情也是很嚴峻<br>大家有力出力<br>一起清淤泥！<br><br>https://www.threads.com/@jibonini_mimimuamua/post/DPGDXxLE1Md?xmt=AQF0aCHuthHGwoZml5o-Hsrdhk6ntyQqtMxuqew_EPZ1bw&slof=1]]></description>
+        <styleUrl>#icon-1769-757575</styleUrl>
+        <Point>
+          <coordinates>
+            121.4287191,23.664165,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>淹水範圍</name>
+      <Placemark>
+        <name>馬太鞍溪堰塞湖</name>
+        <styleUrl>#icon-1899-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.2981544,23.7048054,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>馬太鞍溪堰塞湖</name>
+        <styleUrl>#poly-C2185B-1200-77-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.3026176,23.6941168,0
+                121.3051933,23.6893322,0
+                121.3076823,23.686031,0
+                121.3099998,23.6843804,0
+                121.3147205,23.6846162,0
+                121.3187545,23.6832014,0
+                121.3212436,23.6813935,0
+                121.3258785,23.6809219,0
+                121.3344615,23.6817079,0
+                121.3385269,23.6797713,0
+                121.3414452,23.6774132,0
+                121.34711,23.6791425,0
+                121.3486549,23.6849591,0
+                121.3524315,23.6901466,0
+                121.3617012,23.6918758,0
+                121.3670227,23.6914042,0
+                121.3726875,23.6884175,0
+                121.3814423,23.6840159,0
+                121.3965485,23.6851163,0
+                121.4095947,23.6851163,0
+                121.4090797,23.6914042,0
+                121.3977501,23.6921902,0
+                121.3848434,23.6889294,0
+                121.3729988,23.6939596,0
+                121.3642441,23.6949028,0
+                121.3554893,23.6947456,0
+                121.3482795,23.6919161,0
+                121.3424431,23.6843706,0
+                121.3384948,23.6867286,0
+                121.3318001,23.687043,0
+                121.3268219,23.6864142,0
+                121.321672,23.6876718,0
+                121.3190113,23.6956887,0
+                121.3139473,23.6962389,0
+                121.3063942,23.6969462,0
+                121.3022743,23.6994612,0
+                121.3026176,23.71455,0
+                121.2930046,23.7120353,0
+                121.2947212,23.6985181,0
+                121.3026176,23.6941168,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>馬太鞍溪堰塞湖</name>
+        <styleUrl>#poly-C2185B-1200-77-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.4952286,23.7776533,0
+                121.5171978,23.7796163,0
+                121.5240642,23.7862138,0
+                121.5309307,23.807889,0
+                121.5309307,23.8264201,0
+                121.5371105,23.8414942,0
+                121.55462,23.8641021,0
+                121.5765926,23.8832529,0
+                121.5944454,23.9027148,0
+                121.6171047,23.9340987,0
+                121.6171047,23.9466502,0
+                121.6095516,23.9497879,0
+                121.5934154,23.9275087,0
+                121.5796825,23.9036564,0
+                121.5673229,23.8973788,0
+                121.5505001,23.8854504,0
+                121.5299007,23.8584505,0
+                121.5158245,23.8355275,0
+                121.5096447,23.8100878,0
+                121.509988,23.7915544,0
+                121.4952286,23.7776533,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>重災區｜所有人 禁止進入 (嚴禁)</name>
+        <description><![CDATA[此區域為(重災區)，該區域仍然非常危險，<br>所有人請勿進入。]]></description>
+        <styleUrl>#poly-880E4F-1200-77</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.4320644,23.6636065,0
+                121.4339814,23.6628158,0
+                121.4372037,23.6652036,0
+                121.4414094,23.6673261,0
+                121.4460872,23.6673654,0
+                121.4526103,23.6686625,0
+                121.4597343,23.6706277,0
+                121.4584897,23.6720427,0
+                121.4523528,23.6737328,0
+                121.4432548,23.6769164,0
+                121.4378045,23.6793138,0
+                121.4362596,23.6771522,0
+                121.4352725,23.6743223,0
+                121.4348865,23.6713126,0
+                121.4334701,23.6667365,0
+                121.4320644,23.6636065,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>淹水區</name>
+        <description>淹水區</description>
+        <styleUrl>#poly-F48FB1-1200-59</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.4417796,23.6669844,0
+                121.4468007,23.6614422,0
+                121.4552979,23.6615208,0
+                121.4720349,23.6656873,0
+                121.4859395,23.6774787,0
+                121.4929776,23.6982289,0
+                121.4881711,23.6990148,0
+                121.4838796,23.6870682,0
+                121.46946,23.6754349,0
+                121.4576154,23.6691462,0
+                121.4459853,23.6661589,0
+                121.4417796,23.6669844,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>淹水區</name>
+        <styleUrl>#poly-C2185B-1200-28-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.4095947,23.6851163,0
+                121.4172394,23.6809231,0
+                121.4233385,23.6723277,0
+                121.421793,23.6662477,0
+                121.4248834,23.6653707,0
+                121.4319645,23.6630909,0
+                121.4359126,23.661951,0
+                121.4392386,23.664506,0
+                121.4422211,23.6652135,0
+                121.4459853,23.6661589,0
+                121.4564263,23.6677684,0
+                121.462134,23.670166,0
+                121.4789997,23.6819176,0
+                121.4865528,23.6940219,0
+                121.4932476,23.7202702,0
+                121.4905937,23.7322463,0
+                121.4842422,23.7185739,0
+                121.4802013,23.6938647,0
+                121.4705883,23.6842757,0
+                121.4592586,23.6792451,0
+                121.4360843,23.6855333,0
+                121.41497,23.6897777,0
+                121.4090797,23.6914042,0
+                121.4095947,23.6851163,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>多邊形 12</name>
+        <styleUrl>#poly-C2185B-1200-66-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.4952286,23.7776533,0
+                121.4885304,23.7524475,0
+                121.4837238,23.7469482,0
+                121.4811489,23.7376773,0
+                121.4842422,23.7185739,0
+                121.4905937,23.7322463,0
+                121.4909336,23.7444341,0
+                121.4960835,23.7551185,0
+                121.49883,23.764231,0
+                121.5087864,23.7739713,0
+                121.5189144,23.780412,0
+                121.4952286,23.7776533,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>限重型機具進入｜可自備重機械 協助</name>
+        <description><![CDATA[此區域行人及一般車輛禁止進入，<br>目前僅限重機械通行，正在清淤道路中，<br>如果您是重機械駕駛，<br>歡迎自備重機械前往現場協助。]]></description>
+        <styleUrl>#poly-880E4F-1200-77</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.437519,23.6791768,0
+                121.4307384,23.6810633,0
+                121.4189366,23.6820065,0
+                121.4172394,23.6809231,0
+                121.4244298,23.6708445,0
+                121.424859,23.6721022,0
+                121.4265756,23.671552,0
+                121.427348,23.6733599,0
+                121.4288072,23.6737923,0
+                121.4312104,23.6733599,0
+                121.4347724,23.6717092,0
+                121.4349441,23.6726132,0
+                121.4358882,23.67674,0
+                121.437519,23.6791768,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>限重型機具進入｜可自備重機械 協助</name>
+        <description><![CDATA[一般車輛禁止進入，請讓重機械通行，<br>正在清淤道路中，如果您是重機械駕駛，<br>歡迎自備重機械前往現場協助。]]></description>
+        <styleUrl>#poly-880E4F-1200-77</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.4272193,23.6665209,0
+                121.4284638,23.6645163,0
+                121.4320644,23.6636065,0
+                121.4336995,23.6671105,0
+                121.4345149,23.6701763,0
+                121.4310759,23.6714218,0
+                121.4307384,23.6696653,0
+                121.4295367,23.6681717,0
+                121.4272193,23.6665209,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>需要協助家屋復原-人車可通行</name>
+        <description><![CDATA[此區仍有居民受困，需要志工協助，<br>由於周圍道路已接近癱瘓，請志工徒步前往。<br><br>請備好自己的物資及救災用具(包含水、食物、工作手套、鏟子、雨鞋、口罩、酒精、等裝備)]]></description>
+        <styleUrl>#poly-0F9D58-1200-77</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.4345149,23.6701763,0
+                121.4348865,23.6713126,0
+                121.4319829,23.6729669,0
+                121.4294938,23.6737137,0
+                121.427391,23.6730455,0
+                121.4269003,23.6713799,0
+                121.424859,23.6721022,0
+                121.4244298,23.6708445,0
+                121.4256314,23.6689185,0
+                121.4272193,23.6665209,0
+                121.4295367,23.6681717,0
+                121.4307813,23.6700584,0
+                121.4310759,23.6714218,0
+                121.4345149,23.6701763,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>請勿進入｜國軍進駐 (嚴禁）</name>
+        <description><![CDATA[該區域國軍已經進駐，<br>同時台11甲同時有大量重機具及車輛通行，<br>道路能量已接近癱瘓，<br><br>請志工徒步前往綠色區域支援災復]]></description>
+        <styleUrl>#poly-000000-1200-77</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.4233569,23.6720629,0
+                121.4221124,23.6663637,0
+                121.4284638,23.6645163,0
+                121.4233569,23.6720629,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>極需協助家屋復原
+人車可通行
+</name>
+        <description><![CDATA[需大量志工協助家屋復原<br>欲前往者請留意：<br>1.該區停車不便<br>該區域停車位，請志工盡可能共乘前往，並且最好是人下車後司機立刻開走不停留。<br><br>2.志工個人工具物資請自備<br>請志工攜帶清潔用水與個人飲水，個人需求與救災所需一切用品(包含水、食物、工作手套、鏟子、雨鞋、口罩、酒精、等裝備)<br><br>3.暫不需額外捐贈物資<br>現場物資和機具暫時足夠給災民使用。<br>暫不需額外捐贈，但志工個人用品所需資源請自備。]]></description>
+        <styleUrl>#poly-7CB342-1200-77</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.4669245,23.671915,0
+                121.465401,23.6702642,0
+                121.4655297,23.6693012,0
+                121.465401,23.6681024,0
+                121.4654653,23.6675325,0
+                121.4686411,23.6677487,0
+                121.4699714,23.6677094,0
+                121.4719241,23.6672966,0
+                121.472246,23.6672966,0
+                121.4731043,23.6676307,0
+                121.4723533,23.6682007,0
+                121.4717095,23.6690064,0
+                121.4718168,23.6693995,0
+                121.4710229,23.6700873,0
+                121.4705508,23.6707359,0
+                121.4702504,23.6707948,0
+                121.4691561,23.6707948,0
+                121.4679115,23.6712665,0
+                121.4669245,23.671915,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>村莊範圍</name>
+      <Placemark>
+        <name>大平村｜重災區 (嚴禁) 非常危險</name>
+        <description><![CDATA[大平村 曾培靈村長 0928-295892<br>馬太鞍 Fata’an<br>重災區非常危險禁止進入 (嚴禁)<br>https://maps.app.goo.gl/vxzHEe7xjmHUB13z8<br>—<br>IDA伊達 (脆@ida.kuo)置頂文<br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充<br>—]]></description>
+        <styleUrl>#poly-000000-1200-36</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.4265756,23.671552,0
+                121.4340663,23.6686633,0
+                121.4334701,23.6667365,0
+                121.4385248,23.6650526,0
+                121.4414094,23.6673261,0
+                121.4459853,23.6661589,0
+                121.4489346,23.6672106,0
+                121.4516812,23.6689008,0
+                121.456831,23.669058,0
+                121.4619995,23.6708305,0
+                121.4647031,23.673739,0
+                121.4593816,23.6752325,0
+                121.4503265,23.6762544,0
+                121.4438463,23.6786519,0
+                121.4340209,23.6828879,0
+                121.432669,23.6808835,0
+                121.4310597,23.6808835,0
+                121.4265756,23.671552,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>北富村｜災區</name>
+        <description><![CDATA[北富村 黃進正村長 0915-964101<br>馬太鞍 部落 Fata’an<br>https://maps.app.goo.gl/bNfxfQP15niTVN6i6<br>—<br>IDA伊達 (脆@ida.kuo)置頂文<br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充<br>—]]></description>
+        <styleUrl>#poly-000000-2701-23</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.4517241,23.6563225,0
+                121.4576464,23.6639482,0
+                121.4571744,23.6665031,0
+                121.456831,23.669058,0
+                121.4516812,23.6689008,0
+                121.4489346,23.6672106,0
+                121.445716,23.6660315,0
+                121.4412528,23.6669748,0
+                121.4380341,23.6646557,0
+                121.4353542,23.6621598,0
+                121.4400082,23.6613146,0
+                121.4445572,23.6609216,0
+                121.4474755,23.6600961,0
+                121.450378,23.6585234,0
+                121.4517241,23.6563225,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>大安村｜災區</name>
+        <description><![CDATA[大安村 徐振雄村長 0972-125030<br>馬太鞍 部落 Fata’an<br>https://maps.app.goo.gl/W6PP1izbbGAaKUYY6<br>—<br>IDA伊達 (脆@ida.kuo)置頂文<br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充]]></description>
+        <styleUrl>#poly-000000-1200-36</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.4304281,23.6635383,0
+                121.4207936,23.6665256,0
+                121.4203001,23.665091,0
+                121.4194418,23.6610227,0
+                121.4196349,23.6609048,0
+                121.420343,23.6606886,0
+                121.421609,23.661003,0
+                121.4231969,23.6618874,0
+                121.4250851,23.6628505,0
+                121.4263511,23.6633811,0
+                121.4272738,23.6636563,0
+                121.4283038,23.6634008,0
+                121.4291192,23.6630077,0
+                121.4304281,23.6635383,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>大同村｜災區</name>
+        <description><![CDATA[大同村 邱金仲村長 0912-227528<br>馬太鞍 Fata’an<br>https://maps.app.goo.gl/xJ3VS4JFPEYUabaL6<br>—<br>IDA伊達 (脆@ida.kuo)置頂文<br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充<br>—]]></description>
+        <styleUrl>#poly-000000-1200-31</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.4255154,23.6652241,0
+                121.4303852,23.6636759,0
+                121.4278864,23.6626101,0
+                121.4288306,23.6620992,0
+                121.4309549,23.6612147,0
+                121.4335298,23.6603893,0
+                121.4349031,23.6615095,0
+                121.4388942,23.6648703,0
+                121.4334701,23.6667365,0
+                121.4340663,23.6686633,0
+                121.4265346,23.6714638,0
+                121.4253223,23.6691841,0
+                121.426481,23.6675235,0
+                121.4255154,23.6652241,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>大華村｜災區</name>
+        <description><![CDATA[大華村｜災區<br>大華村 曾天滄村長 0937-175368<br>https://maps.app.goo.gl/WGN4WjxwkGTxA5Ja6<br><br>大同村 邱金仲村長 0912-227528<br>馬太鞍 Fata’an<br>https://maps.app.goo.gl/xJ3VS4JFPEYUabaL6<br>—<br>IDA伊達 (脆@ida.kuo)置頂文<br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充<br>—]]></description>
+        <styleUrl>#poly-000000-1200-36</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.4316424,23.679639,0
+                121.432608,23.6819384,0
+                121.4265802,23.6909802,0
+                121.4245416,23.6896832,0
+                121.4157858,23.6837875,0
+                121.4117942,23.680761,0
+                121.4115367,23.6782847,0
+                121.4180391,23.6771448,0
+                121.4184468,23.6774396,0
+                121.4189191,23.6774789,0
+                121.4195629,23.677302,0
+                121.420314,23.6771251,0
+                121.4214514,23.6772824,0
+                121.4220093,23.6775772,0
+                121.4227175,23.6779506,0
+                121.4238977,23.6786778,0
+                121.4243699,23.678894,0
+                121.4247347,23.6786974,0
+                121.4250566,23.678324,0
+                121.4252927,23.6779703,0
+                121.4254643,23.677302,0
+                121.4254,23.6765552,0
+                121.4255252,23.6755752,0
+                121.4269451,23.6809182,0
+                121.4316424,23.679639,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>西富村｜災區</name>
+        <description><![CDATA[西富村 座標｜劉貴滿. 0910-609136<br>https://maps.app.goo.gl/nFgtNR95EF81ppWTA<br><br>—<br>IDA伊達 (脆@ida.kuo)置頂文<br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充]]></description>
+        <styleUrl>#poly-000000-1200-38</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.4356346,23.6620434,0
+                121.4315254,23.6585012,0
+                121.4297552,23.653081,0
+                121.4250345,23.6471844,0
+                121.4209146,23.6421523,0
+                121.4131899,23.6374346,0
+                121.4149923,23.6353903,0
+                121.4205713,23.6310655,0
+                121.424777,23.6267406,0
+                121.4301843,23.6227301,0
+                121.4378233,23.6206068,0
+                121.4452047,23.6246174,0
+                121.4430589,23.626662,0
+                121.441514,23.6295715,0
+                121.439969,23.6300433,0
+                121.4404411,23.6359014,0
+                121.440484,23.6361766,0
+                121.4419002,23.636609,0
+                121.4429731,23.6379851,0
+                121.4445181,23.640108,0
+                121.4420775,23.6406963,0
+                121.4426298,23.6438035,0
+                121.4433164,23.6434497,0
+                121.4441318,23.6444718,0
+                121.4442176,23.6459657,0
+                121.4451189,23.647263,0
+                121.4455051,23.6481671,0
+                121.4468784,23.6507617,0
+                121.4484234,23.6536706,0
+                121.4492387,23.6565402,0
+                121.450378,23.6585234,0
+                121.4484234,23.6596063,0
+                121.4445572,23.6609216,0
+                121.4400082,23.6613146,0
+                121.4356346,23.6620434,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>大進村｜災區</name>
+        <description><![CDATA[大進村 林正立村長 0933-484530<br>https://maps.app.goo.gl/EApg2wyLJbQVXahY8<br>—<br>IDA伊達 (脆@ida.kuo)置頂文<br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充]]></description>
+        <styleUrl>#poly-000000-1200-28</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                121.4193989,23.6611603,0
+                121.4174385,23.6545114,0
+                121.4196926,23.6536423,0
+                121.4193267,23.6530176,0
+                121.4193697,23.6525262,0
+                121.4226312,23.6506786,0
+                121.4238114,23.6496959,0
+                121.4258928,23.6487524,0
+                121.4271266,23.6502855,0
+                121.4294226,23.6524869,0
+                121.4298303,23.6537645,0
+                121.4298732,23.6552583,0
+                121.4305813,23.6568896,0
+                121.4315254,23.6585012,0
+                121.4328987,23.6609383,0
+                121.4309549,23.6612147,0
+                121.4294226,23.6620586,0
+                121.4283497,23.6631985,0
+                121.4269335,23.663454,0
+                121.4250238,23.6626089,0
+                121.4211185,23.6606828,0
+                121.4201743,23.6606435,0
+                121.4193989,23.6611603,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>大馬村｜災區</name>
+        <description><![CDATA[大馬村 王梓安村長 0936-573056<br>馬太鞍 部落 Fata’an<br>https://maps.app.goo.gl/2WHcozVZrtb6fkdY6<br><br>—<br>IDA伊達 (脆@ida.kuo)置頂文<br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充]]></description>
+        <styleUrl>#poly-000000-1901-43</styleUrl>
+        <MultiGeometry>
+          <Polygon>
+            <outerBoundaryIs>
+              <LinearRing>
+                <tessellate>1</tessellate>
+                <coordinates>
+                  121.4253949,23.6691907,0
+                  121.4256314,23.6689185,0
+                  121.4254188,23.6692398,0
+                  121.4253949,23.6691907,0
+                </coordinates>
+              </LinearRing>
+            </outerBoundaryIs>
+          </Polygon>
+          <Polygon>
+            <outerBoundaryIs>
+              <LinearRing>
+                <tessellate>1</tessellate>
+                <coordinates>
+                  121.4254188,23.6692398,0
+                  121.4295791,23.6777786,0
+                  121.4310597,23.6808835,0
+                  121.432669,23.6808835,0
+                  121.4340209,23.6828879,0
+                  121.4250301,23.6856586,0
+                  121.4206742,23.6862088,0
+                  121.4140438,23.6872699,0
+                  121.4084291,23.6889158,0
+                  121.4022063,23.6887979,0
+                  121.3931083,23.68868,0
+                  121.3850831,23.6879333,0
+                  121.3798474,23.6875796,0
+                  121.3789891,23.6761036,0
+                  121.3820361,23.6676925,0
+                  121.3893317,23.6617179,0
+                  121.3958978,23.6617179,0
+                  121.4006614,23.6639191,0
+                  121.4064979,23.6669457,0
+                  121.4141368,23.672527,0
+                  121.4204883,23.6766932,0
+                  121.4254188,23.6692398,0
+                </coordinates>
+              </LinearRing>
+            </outerBoundaryIs>
+          </Polygon>
+        </MultiGeometry>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>交通路線</name>
+      <Placemark>
+        <name>大進街 開車路線</name>
+        <description>大進街 開車路線</description>
+        <styleUrl>#line-FBC02D-4466</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            121.4578989,23.6571476,0
+            121.4577809,23.6562631,0
+            121.4533719,23.6585318,0
+            121.4511934,23.6595257,0
+            121.450378,23.6585234,0
+            121.4498201,23.6589558,0
+            121.4484468,23.6593685,0
+            121.4469775,23.6603203,0
+            121.4450463,23.6608313,0
+            121.4425358,23.6610082,0
+            121.4393386,23.661303,0
+            121.4371171,23.6616877,0
+            121.4368066,23.6602417,0
+            121.4356478,23.6585121,0
+            121.4351543,23.6577849,0
+            121.4349397,23.6559963,0
+            121.4345964,23.655446,0
+            121.4339312,23.6547974,0
+            121.4331802,23.6539916,0
+            121.4323434,23.6531464,0
+            121.4312705,23.6516919,0
+            121.4270105,23.6536025,0
+            121.4217748,23.6561183,0
+            121.4215916,23.6562171,0
+            121.4208943,23.6554801,0
+            121.4201325,23.6541632,0
+            121.4196926,23.6536423,0
+            121.4190918,23.654006,0
+            121.4179975,23.6543696,0
+            121.4192206,23.657249,0
+            121.4204544,23.6593618,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>民治街 替代道路</name>
+        <styleUrl>#line-0288D1-4273-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            121.4578989,23.6571476,0
+            121.4577809,23.6562631,0
+            121.4550602,23.6576479,0
+            121.4533719,23.6585318,0
+            121.4497387,23.653599,0
+            121.4498674,23.6465624,0
+            121.4499533,23.6448719,0
+            121.4502966,23.6440464,0
+            121.4510261,23.6429456,0
+            121.451498,23.6420219,0
+            121.4513049,23.6417369,0
+            121.4508542,23.6412651,0
+            121.4505538,23.640125,0
+            121.4503393,23.6391422,0
+            121.4500174,23.6386901,0
+            121.4491376,23.6387097,0
+            121.4481506,23.6389653,0
+            121.4467982,23.6393006,0
+            121.4439873,23.6400672,0
+            121.4420775,23.6406963,0
+            121.4411548,23.6407749,0
+            121.4391807,23.6410697,0
+            121.4376358,23.6414629,0
+            121.4365736,23.641797,0
+            121.4355115,23.6422,0
+            121.4345781,23.6423966,0
+            121.4337949,23.6423671,0
+            121.4331619,23.6424949,0
+            121.4319388,23.6425047,0
+            121.4307157,23.6424457,0
+            121.4294497,23.6405783,0
+            121.429042,23.6398903,0
+            121.428087,23.6405223,0
+            121.4270463,23.6406992,0
+            121.4258447,23.6411611,0
+            121.424643,23.6415739,0
+            121.4237418,23.6418688,0
+            121.4230659,23.6421341,0
+            121.4204535,23.6440163,0
+            121.4154377,23.6457411,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>光復車站前｜車輛請改道(禁)</name>
+        <description><![CDATA[光復車站出來的台11甲線<br>已經有國軍及重機械進入災復及交管<br><br>目前道路壅塞，車輛難以通行，<br>請從193線往南<br>改走建議替代道路後 (徒步進入災區)]]></description>
+        <styleUrl>#line-E65100-7932</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            121.421793,23.6662477,0
+            121.4353542,23.6621598,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>交通管制-禁止通行</name>
+        <description><![CDATA[建議改由南邊大進街、民治街進出，<br>已列出替代道路]]></description>
+        <styleUrl>#icon-1898-C2185B-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4353542,23.6621598,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>交通管制-禁止通行</name>
+        <description>交通管制-禁止通行</description>
+        <styleUrl>#icon-1898-C2185B-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.421793,23.6662477,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>1.庇護所 避難中心 指揮所 窗口</name>
+      <Placemark>
+        <name>消防特搜，前進指揮所 (03)8460599</name>
+        <description><![CDATA[(((政府到達當地、24小時待命救援))<br>花蓮光復糖廠.設置前進指揮所<br>👉花蓮縣災害應變中心(03)8460599<br>—<br>提供當地居民.花蓮馬太鞍溪 復興鄉<br>哪些家人需要協助資訊<br>(姓名、地址、電話、現況)<br>災害應變中心人員非常專業<br>會馬上處理<br>—<br>⚠️物資救援<br>麻煩送至光復糖廠的光復鄉災害應變中心<br>送去之前請先聯絡專線：03-8460599<br>蔡依靜議員0929341189<br>部落主席 徐清德0985-202-152<br>青年階層 馬耀0963-054-514<br>青年階層 詹世豪0989-331-709<br>天主教會長 黃俊龍 0922-125-647<br>鄭萬正代表 0935-430-674]]></description>
+        <styleUrl>#icon-1603-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            121.4206724,23.6590554,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>門諾基金會（Mennonite Social Welfare Foundation）光復工作站</name>
+        <description><![CDATA[⛅️ 門諾基金會（Mennonite Social Welfare Foundation）光復工作站<br><br>- 電話：03-8700110<br>- 地址：花蓮縣光復鄉光復路6號]]></description>
+        <styleUrl>#icon-1603-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            121.4238254,23.6688905,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>財團法人一粒麥子社會福利慈善事業基金會-花蓮服務中心</name>
+        <description><![CDATA[一粒麥子社會福利慈善基金會（A Grain of Wheat Foundation）－光復中心<br><br>- 電話：03-870-4747<br>- 地址：花蓮縣光復鄉中華路232巷12號]]></description>
+        <styleUrl>#icon-1603-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            121.4235525,23.6675227,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>台糖花蓮旅館（提供花蓮縣府成立前進指揮所及救護站）</name>
+        <description><![CDATA[🔺台糖花蓮旅館（提供花蓮縣府成立前進指揮所及救護站）<br>📍 台灣花蓮縣光復鄉糖廠街19號]]></description>
+        <styleUrl>#icon-1603-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            121.4199754,23.6566924,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>🔺 馬太鞍 長老教會（📍避難所）</name>
+        <description><![CDATA[🔺  馬太鞍長老教會（📍避難所）<br> 蔡智輝代表 0919-965-120<br> 曾培靈村長 0928-295-892<br> 王梓安村長 0936-573-056]]></description>
+        <styleUrl>#icon-1603-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            121.4263269,23.675416,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>🔺 太巴塱 長老教會 （📍避難所）</name>
+        <description><![CDATA[緊急避難中心<br>🔺  太巴塱基督長老教會 （📍避難所）<br>📞  曾翔麟幹事0980285961<br> 地址：976花蓮縣光復鄉中正路二段90號]]></description>
+        <styleUrl>#icon-1603-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            121.450425,23.6578363,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>🔺光復高職避難所（📍避難所）</name>
+        <description><![CDATA[🔺光復高職避難所（📍避難所）<br>📍台灣花蓮縣光復鄉林森路100號]]></description>
+        <styleUrl>#icon-1603-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            121.4273418,23.6671699,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>🔺 大進國小（📍避難所）</name>
+        <description><![CDATA[🔺 大進國小（📍避難所）<br> 葛小姐 0976-095-302<br> 年齡階層總幹事 張志雄0960-514994]]></description>
+        <styleUrl>#icon-1603-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            121.4191354,23.6546993,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>🔺  光復國小（📍避難所）</name>
+        <description><![CDATA[🔺  光復國小（📍避難所）<br> 鄭萬正代表 0935-430-674<br> 梁家瑋 0930-265-833]]></description>
+        <styleUrl>#icon-1603-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            121.4271944,23.6736105,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>🔺順泰旅店（提供免費住宿）（📍避難所）</name>
+        <description><![CDATA[🔺順泰旅店（提供免費住宿）（📍避難所）<br>📍 台灣花蓮縣壽豐鄉中山路215號<br>📞0939-393-092]]></description>
+        <styleUrl>#icon-1603-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            121.4956458,23.8494538,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>🔺馬瑞診所（提供臨時安置）（📍避難所）</name>
+        <description><![CDATA[🔺馬瑞診所（提供臨時安置）（📍避難所）<br>📍 台灣花蓮縣鳳林鎮長橋路58號<br>📞 林仁智醫師 0988-812-012]]></description>
+        <styleUrl>#icon-1603-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            121.4203807,23.712211,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>2.臨時安置.民宿.飯店(免費) </name>
+      <Placemark>
+        <name>云花民宿｜9/24–10/8｜雙人房 5 間</name>
+        <description><![CDATA[云花民宿｜9/24–10/8｜雙人房 5 間<br>花蓮縣花蓮市中正路475號 0972244710 @231nwmlm]]></description>
+        <styleUrl>#icon-1603-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            121.6053752,23.976125,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>茉白民宿 | 東大門夜市旁 9/24–25｜四人房 3 間</name>
+        <description>茉白民宿 | 東大門夜市旁 9/24–25｜四人房 3 間</description>
+        <styleUrl>#icon-1603-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            121.613704,23.9732908,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>捷樂民宿 9/24–25｜四人房 1 間、雙人房 1 間</name>
+        <description>捷樂民宿 9/24–25｜四人房 1 間、雙人房 1 間</description>
+        <styleUrl>#icon-1603-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            121.6093262,23.9778963,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>綠道74民宿｜9/24-25 ｜四人房2間</name>
+        <description>綠道74民宿｜9/24-25 ｜四人房2間</description>
+        <styleUrl>#icon-1603-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            121.6020748,23.9772416,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>晨曉家｜9/24–28｜雙人房、四人房</name>
+        <description><![CDATA[晨曉家｜9/24–28｜雙人房、四人房<br>花蓮縣吉安鄉吉昌二街246巷5號 0915 755 779]]></description>
+        <styleUrl>#icon-1603-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            121.562108,23.9710814,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>伯爵農莊｜9/24–25｜雙人房 2 間</name>
+        <description>伯爵農莊｜9/24–25｜雙人房 2 間</description>
+        <styleUrl>#icon-1603-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            121.5678935,23.9618223,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>皇家溪畔民宿｜9/24–26｜雙人房 2 間、四人房 2 間</name>
+        <description>皇家溪畔民宿｜9/24–26｜雙人房 2 間、四人房 2 間</description>
+        <styleUrl>#icon-1603-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            121.5844118,23.975754,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>花蓮隨心所寓民宿｜9/24–26｜四人房 4 間</name>
+        <description>花蓮隨心所寓民宿｜9/24–26｜四人房 4 間</description>
+        <styleUrl>#icon-1603-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            121.5631295,23.9826927,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>TC 慢旅-花蓮教授的家｜9/24–26｜雙人房 1 間、四人房 1 間、三人房 2 間</name>
+        <description>TC 慢旅-花蓮教授的家｜9/24–26｜雙人房 1 間、四人房 1 間、三人房 2 間</description>
+        <styleUrl>#icon-1603-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            121.5880238,23.9646949,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>愛分享民宿 ｜9/24–25｜雙人房 2 間</name>
+        <description>愛分享民宿 ｜9/24–25｜雙人房 2 間</description>
+        <styleUrl>#icon-1603-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            121.5952033,23.9857246,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>TC 慢旅-花蓮教授的家｜9/24–26｜雙人房 1 間、四人房 1 間、三人房 2 間</name>
+        <description>TC 慢旅-花蓮教授的家｜9/24–26｜雙人房 1 間、四人房 1 間、三人房 2 間</description>
+        <styleUrl>#icon-1603-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            121.5880238,23.9646949,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>雲上太陽民宿｜9/24–25｜四人房 5 間</name>
+        <description>雲上太陽民宿｜9/24–25｜四人房 5 間</description>
+        <styleUrl>#icon-1603-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            121.537334,23.9073197,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>光復鄉 部落</name>
+      <Placemark>
+        <name>1.阿陶莫.阿托莫 Atomo</name>
+        <description><![CDATA[🔺  **阿陶莫.阿托莫 Atomo 臨時安置站｜阿陶莫文化健康站**<br> 東富村｜黃建桐村長 0910-273519<br><br>阿陶莫部落 也是光復鄉 受災區<br>唯一通行的193縣道路必經之處<br>如有物資集運也請幫幫他們<br>小心行駛<br>—<br>https://www.threads.com/@grace_tograce/post/DPAieBOk-Mv?xmt=AQF0OWgHLRnUYuJlwJexdbOhWiv25wIdeKEMGD17PacxJw&slof=1<br>—<br><br>https://www.instagram.com/p/DPAk1LmiBKY/?igsh=MWJlZndyeHJwcDc1NQ==<br><br>—<br>https://www.threads.com/@ru.922/post/DPAuKqJiR7e?xmt=AQF0Yh9FSlgq7CYm-BiNgK97akJTcSoHAhRcC6Dj6rMFlw&slof=1]]></description>
+        <styleUrl>#icon-1577-F9A825</styleUrl>
+        <Point>
+          <coordinates>
+            121.4672137,23.6717975,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>2.馬太鞍 馬太鞍 Fata’an</name>
+        <description><![CDATA[馬太鞍祭祀廣場<br>馬太鞍 Fata’an<br><br>—<br>IDA伊達 (脆@ida.kuo)置頂文<br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充<br>—<br>光復鄉各村村長 9/23(1)<br>大安村 徐振雄村長 0972-125030<br>大同村 邱金仲村長 0912-227528<br>大馬村 王梓安村長 0936-573056<br>大進村 林正立村長 0933-484530<br>大華村 曾天滄村長 0937-175368<br>大平村 曾培靈村長 0928-295892<br>北富村 黃進正村長 0915-964101<br>大進村 林正立村長 0933-484530]]></description>
+        <styleUrl>#icon-1577-F9A825</styleUrl>
+        <Point>
+          <coordinates>
+            121.4230751,23.6735049,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>3.太巴塱 Tafalong｜東富村</name>
+        <description><![CDATA[太巴塱 部落 老莿桐<br>東富村｜黃建桐村長 0910-273519<br><br><br>9/25 太巴塱部落 居民說 沒物資<br>https://www.threads.com/@ida.kuo/post/DPBHVc1E-D3?xmt=AQF0SxJzzErUptcsoU-CMD2kwI4_lbabdJfCjWU_EGc2hA&slof=1<br><br>1. 加里洞部落]]></description>
+        <styleUrl>#icon-1577-F9A825</styleUrl>
+        <Point>
+          <coordinates>
+            121.4505879,23.659031,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4.加里洞 Kalotong｜東富村</name>
+        <description><![CDATA[加里洞 部落 光復鄉<br>東富村｜黃建桐村長 0910-273519]]></description>
+        <styleUrl>#icon-1577-F9A825</styleUrl>
+        <Point>
+          <coordinates>
+            121.488077,23.694071,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>太巴塱部落太巴塱阿美族文化發祥地</name>
+        <styleUrl>#icon-1577-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4680185,23.6601937,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>拉索埃 部落 光復鄉</name>
+        <description>拉索埃 部落 光復鄉</description>
+        <styleUrl>#icon-1577-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            121.4227166,23.6521076,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>砂荖部落 光復鄉</name>
+        <description>砂荖部落 光復鄉</description>
+        <styleUrl>#icon-1577-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            121.458493,23.64363,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>阿囉隆 部落 光復鄉</name>
+        <description>阿囉隆 部落 光復鄉</description>
+        <styleUrl>#icon-1577-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            121.434627,23.6274807,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>阿陶莫 Atomo 臨時安置站</name>
+        <description><![CDATA[🔺 阿陶莫.阿托莫 Atomo 臨時安置站 <br>東富村｜黃建桐村長 0910-273519<br>https://maps.app.goo.gl/2UMp1xqNC68QHxpCA<br><br><br>阿陶莫文化健康站]]></description>
+        <styleUrl>#icon-1603-880E4F</styleUrl>
+        <Point>
+          <coordinates>
+            121.4718522,23.6676332,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大富火車站</name>
+        <styleUrl>#icon-1603-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.389624,23.605688,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>光復車站</name>
+        <styleUrl>#icon-1603-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.421167,23.666293,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>萬榮站</name>
+        <styleUrl>#icon-1603-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.419066,23.711977,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>鳳林火車站</name>
+        <styleUrl>#icon-1603-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4469947,23.7463498,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>富源火車站</name>
+        <styleUrl>#icon-1603-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.380122,23.580268,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>光復鄉 村長</name>
+      <Placemark>
+        <name>大平村｜重災區 (嚴禁) 非常危險</name>
+        <description><![CDATA[大平村 曾培靈村長 0928-295892<br>馬太鞍 Fata’an<br>重災區非常危險禁止進入 (嚴禁)<br>https://maps.app.goo.gl/vxzHEe7xjmHUB13z8<br>—<br>IDA伊達 (脆@ida.kuo)置頂文<br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充<br>—]]></description>
+        <styleUrl>#icon-1577-F9A825-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4393707,23.6744563,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>東富村｜災區</name>
+        <description><![CDATA[東富村｜黃建桐村長 0910-273519<br>https://maps.app.goo.gl/DXibk8hFNQVB4W4c6<br><br>—<br>IDA伊達 (脆@ida.kuo)置頂文 <br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充<br>—<br>前往時可問村長<br>他們會告訴您現在路況與接應<br>🔺 1. 阿陶莫部落 Atomo｜東富村<br>🔺 4.加里洞部落 Kalotong｜東富村<br>🔺 3.太巴塱部落 Tafalong｜東富村<br> 黃進正. (北富村 村長) 0915-964101 <br> 黃建桐 (東富村 村長) 0910-273-519<br> 黃建富 頭目 0928-608-212<br> 鄭敏芳　　　 0988-126-744<br> 孫志文 青年會長 0915-973-075<br> 趙先生 0905-467-846<br>—<br>東富村 座標｜<br>https://maps.app.goo.gl/DXibk8hFNQVB4W4c6<br>—<br>9/26(5)20:00交通更新 <br>開車請往鳳林、走劍英大橋往193線道。就可以抵達。早上記得走台11<br>—<br>導航：阿陶莫部落也可以。<br>或搜尋光復鄉東富路18巷5號也是可以。以上（大家參考一下）]]></description>
+        <styleUrl>#icon-1577-F9A825-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4766802,23.6673956,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>北富村｜災區</name>
+        <description><![CDATA[北富村 黃進正村長 0915-964101<br>馬太鞍 部落 Fata’an<br>https://maps.app.goo.gl/bNfxfQP15niTVN6i6<br>—<br>IDA伊達 (脆@ida.kuo)置頂文<br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充<br>—]]></description>
+        <styleUrl>#icon-1577-F9A825-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4494066,23.6636856,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>西富村｜災區</name>
+        <description><![CDATA[西富村 座標｜劉貴滿. 0910-609136<br>https://maps.app.goo.gl/nFgtNR95EF81ppWTA<br><br>—<br>IDA伊達 (脆@ida.kuo)置頂文<br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充<br>—]]></description>
+        <styleUrl>#icon-1603-F9A825-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4366179,23.6500078,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大同村｜災區</name>
+        <description><![CDATA[大同村 邱金仲村長 0912-227528<br>馬太鞍 Fata’an<br>https://maps.app.goo.gl/xJ3VS4JFPEYUabaL6<br>—<br>IDA伊達 (脆@ida.kuo)置頂文<br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充<br>—]]></description>
+        <styleUrl>#icon-1577-F9A825-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4299042,23.6667128,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大安村｜災區</name>
+        <description><![CDATA[大安村 徐振雄村長 0972-125030<br>馬太鞍 部落 Fata’an<br>https://maps.app.goo.gl/W6PP1izbbGAaKUYY6<br>—<br>IDA伊達 (脆@ida.kuo)置頂文<br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充<br>—]]></description>
+        <styleUrl>#icon-1577-F9A825-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4234753,23.6635018,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大進村｜災區</name>
+        <description><![CDATA[大進村 林正立村長 0933-484530<br>https://maps.app.goo.gl/EApg2wyLJbQVXahY8<br>—<br>IDA伊達 (脆@ida.kuo)置頂文<br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充<br>—]]></description>
+        <styleUrl>#icon-1577-F9A825-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4241897,23.6573559,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大華村｜災區</name>
+        <description><![CDATA[大華村 曾天滄村長 0937-175368<br><br>大華村 座標｜<br>https://maps.app.goo.gl/WGN4WjxwkGTxA5Ja6<br><br>—<br>IDA伊達 (脆@ida.kuo)置頂文<br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充<br>—]]></description>
+        <styleUrl>#icon-1577-F9A825-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4203845,23.6686514,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大馬村｜災區</name>
+        <description><![CDATA[大馬村 王梓安村長 0936-573056<br>馬太鞍 部落 Fata’an<br>https://maps.app.goo.gl/2WHcozVZrtb6fkdY6<br><br>—<br>IDA伊達 (脆@ida.kuo)置頂文<br>有完整詳細救災攻略<br>需要可以拿去用.歡迎更新補充<br>—]]></description>
+        <styleUrl>#icon-1577-F9A825-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.411693,23.674952,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>救援民眾資訊 9/25滾動更新</name>
+      <Placemark>
+        <name>學士街12號 (受困)</name>
+        <description><![CDATA[👉 學士街12號 朋友媽媽，(受困)<br>困家裡面，門被污泥、雜物堆積無法開門]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4328903,23.6672014,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>武昌街290號(已救援) </name>
+        <description>武昌街290號2樓 共三名（兩名老人家＋小薛）已救出</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            121.4242013,23.6735375,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中學街166巷2號 (待救援)</name>
+        <description>中學街166巷20弄2號：家中三樓90歲50多歲身心障礙者受困</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4258065,23.6723105,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中學街166巷22號 (待救援)</name>
+        <description>二樓有人受困，目前不清楚屋內人數。</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4259532,23.672609,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中學街93號 (待救援)</name>
+        <description>中學街93號，阿嬤 一個人</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4284083,23.6705696,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中學街90巷1號 (受困) </name>
+        <description><![CDATA[中學街90巷1-1號，<br>兩人臥床，阿嬤跟叔叔還在等待救援<br>https://www.threads.com/@eraywang/post/DO82ROXks0t?xmt=AQF0oopssKL-YkcSPESfiZfsmntg-aE378ufsMTIYiE3EQ&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4284501,23.670919,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中學街106號 (待救援)</name>
+        <description><![CDATA[👉 中學街106號，糖尿病患，未進食十小時，受困二樓。<br>👉 中學街106號，綠 (已救援)]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4275078,23.6711162,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>敦厚路17號 (待救援) 5人2樓</name>
+        <description>敦厚路17號：5 人 2樓 ( 1 位行動不便的失智長者， 1 位需要高血壓和糖尿病藥物的大人。家人整晚未進食，目前僅剩少量餅乾)聯絡0928700959(鍾先生)或是LINE號碼c0936789088</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4255943,23.6656765,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>敦厚路172號  (待救援) 余正雄</name>
+        <description><![CDATA[敦厚路172號：<br>余正雄家2樓一群老人沒有東西吃。]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4276874,23.6706112,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>敦厚路135巷28號 (待救援) 老人</name>
+        <description><![CDATA[敦厚路135巷28弄3號：<br>老人家重攤患者氣切需要氧氣、抽痰機，<br>人還在屋頂避難。]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4263795,23.6696451,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>敦厚路173號2樓 (待救援) 林明華 76歲</name>
+        <description>敦厚路173號2樓：林明華先生（赫恪）76歲，困在二樓，沒有帶充電器、沒有食物沒有水 又停電，剛出院身體虛虛弱的老人腳勉強可以走路。</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4275648,23.6706989,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>自強路80巷29號 (待救援) 8人</name>
+        <description><![CDATA[自強路80巷29號：(待救援) 8人<br>老人館有2個大人 6個小孩，因住戶只有一樓全部躲到老人館。黃小姐0988991434。]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4282793,23.6669305,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>自強街(高職旁)(待救援) 賴秀鳳 3人</name>
+        <description><![CDATA[👉 自強街(高職旁)：(待救援) 賴秀鳳 3人<br>一處半成品的工地二樓，有一身體狀況不佳之母親賴秀鳳與家人共三人還困在其中。]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4280433,23.6668052,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>武昌街74巷8號 (受困)三樓</name>
+        <description>武昌街74巷1弄8號：受困三樓。</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4317419,23.6716519,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>佛祖街7號 (已救援) 陳佳慧 5人</name>
+        <description><![CDATA[佛祖街46巷7號，<br> 屋頂上有5位：一位小朋友 叫陳佳慧，其餘四位為老人+青壯年。（已救援）]]></description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            121.4320644,23.6636065,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>佛祖街22號 (找到) 曾忠明</name>
+        <description>佛祖街22號，曾忠明（族語名：西否），(找到了在玉里農民醫院)</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            121.4324705,23.6638877,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>佛祖街313號 (失聯)陳秀英 陳秀美</name>
+        <description><![CDATA[👉 佛祖街313號｜外婆叫 陳秀英 個子小小的老家在保安寺的正對面 <br> 👉 陳秀美，失聯]]></description>
+        <styleUrl>#icon-1899-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            121.4346674,23.672329,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>佛祖街336巷22號 (失聯) 高銘盛 被大水沖走</name>
+        <description><![CDATA[👉 高銘盛 (失聯) 被大水沖走 男 65歲<br>蔡偉慈 女 60歲 (找到)送醫<br>聯絡人：0972-163-187 高頡生<br>佛祖街336巷22號 （靠近堰塞湖）<br>谷歌地圖｜https://maps.app.goo.gl/AzotDGz7L8fffVe36<br>女兒貼文 9/25<br>https://www.threads.com/@qoo33331/post/DO-9B42EnFz?xmt=AQF0K19PQhVpmybLjwkxZuWaebi2UZUOhpDIK-Ceu7j1lQ&slof=1]]></description>
+        <styleUrl>#icon-1899-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            121.4374546,23.6734942,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中華路369號 (受困)曾素美</name>
+        <description><![CDATA[👉 大馬村中華路369號 曾素美姐姐，人在二樓需要物資。(需要物資)<br>👉 吳菊花 85歲 (找到了)<br>👉 馬太鞍天主堂呂德偉神父（已找到，在花蓮會院安置）<br>https://www.threads.com/@hefengcafe/post/DO890lfjxzd?xmt=AQF037ejFaHq3hoZ9mKJJH_C--K6WmzNG2mH5d24Uc3XiQ&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4247477,23.672381,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中學街106號  (待救援)</name>
+        <description><![CDATA[光復鄉大平村中學街106號，綠已經救援<br>👉 中學街106號，糖尿病患，未進食十小時，受困二樓。<br> 👉 其他(已救援)]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4275078,23.6711162,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>學街123號(待救援) 田阿妹 </name>
+        <description>👉 中學街123號，田阿妹</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4272281,23.6710533,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中學街136號(失聯)王春妹</name>
+        <description>👉 中學街136號，王春妹</description>
+        <styleUrl>#icon-1899-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            121.4269003,23.6713799,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中學街210號 鄭寶財（已安置）</name>
+        <description>👉 中學街210號，鄭寶財（已安置）</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            121.4246722,23.6723518,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中學街166巷23號  (待救援)</name>
+        <description><![CDATA[👉 中學街166巷23號：<br>老人臥床需要氧氣鋼瓶，0966-781-822張姊姊。]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4255085,23.6720975,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中興路530號(待救援)李正妹 86歲</name>
+        <description><![CDATA[👉 中興路530號(待救援)李正妹86歲 (藍色鐵皮屋)， <br>媽媽李正妹86歲一個人一隻狗一隻貓受困二樓。<br><br>https://www.threads.com/@amylee071829/post/DO9j9j6kvb6?xmt=AQF0mvrun0lPa2odtgNAuz9PZ4vrAwtHrh0vG8cwkBM5xQ&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.422655,23.6687911,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中山路二段233號(失聯) 黃珠妹 依德巴農</name>
+        <description>👉 中山路二段233號（喜多品食堂），黃珠妹 90多歲女、依德巴農 70多歲男。</description>
+        <styleUrl>#icon-1899-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            121.423714,23.6661458,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中正路一段360巷3號 (失聯) 陳春木</name>
+        <description>👉 中正路一段360巷3-1號，陳春木，失聯</description>
+        <styleUrl>#icon-1899-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            121.4304054,23.6634073,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中正路一段368巷1-1號 (失聯) 盧啟杉102歲</name>
+        <description>👉 中正路一段368巷1-1號，盧啟杉102歲，聯絡人：盧先生0955666408。盧小姐0976086120</description>
+        <styleUrl>#icon-1899-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            121.4307083,23.6628157,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>敦厚路42巷16號 (找到) 陳文毅 黎慧英</name>
+        <description>👉 敦厚路42巷16號，陳文毅 黎慧英。</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            121.4258023,23.6657664,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>天主教會 聖保祿歸化堂 (找到) 呂德偉神父</name>
+        <description>👉 馬太鞍天主堂呂德偉神父（已找到，在花蓮會院安置）</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4242886,23.6721177,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>佛祖街 (失聯) 蔡正夫 住在大同區？</name>
+        <description><![CDATA[👉 蔡正夫 (失聯)  待救援<br>聯絡女兒 蔡瑋瑋 0913-311-927<br>佛祖街 佛政旺企業 後面那塊地，23.66,121.444756 <br><br>谷歌地圖｜https://maps.app.goo.gl/g2PtukVNjKMCHoLm6<br><br>—<br>蔡正夫 女兒 協尋文<br>https://www.threads.com/@limbusva/post/DO90JmIkuj1?xmt=AQF0JQE07YczP_1oD5nQlv3KbIwkYyMKrDymZn1ZAzg8Gg&slof=1<br>—<br><br>蔡正夫 兒子 協尋文<br>https://www.threads.com/@chrissheeta/post/DO_MV3Lk_UP?xmt=AQF0zj1V5nhrEP9T91jmVOXfsxr7SdjtHfINdTvuJ3BCsA&slof=1]]></description>
+        <styleUrl>#icon-1899-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            121.4446518,23.6741626,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>佛祖街46巷28-1號 (已安置) 吳蘭香 3人 </name>
+        <description>佛祖街46巷28-1號 (已安置) 吳蘭香 3人</description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            121.4326498,23.6647175,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中學街75號 (待救援) 陳鞍讀 曾瑩姿</name>
+        <description><![CDATA[👉 中學街75巷：👉 陳鞍讀，中學街75巷1弄19號，（在家2樓）<br>  👉 曾瑩姿，中學街75巷17號：（獨居老人）<br>他的阿姨 曾瑩姿<br>https://www.threads.com/@naxixixi___._/post/DO8q7fCEgSY?xmt=AQF0OHigJDcjpUZ-R74eLQgDCmjC3TwWzWgjOeno0OD7sg&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.428745,23.6703614,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>學士街186號 (找到) 陳木生 曾英花 </name>
+        <description><![CDATA[👉 學士街186號 陳木生 阿公 曾英花 阿嬤 (已救援)<br>👉 學士街188號 阿嬤失智 (已救援)<br>https://www.threads.com/@cooking._.nina/post/DO-JBTqkdsa?xmt=AQF0yAqEQE2mHuHx1yeds5XHqRpUTVrOaXhHC49Q4Z8_0g&slof=1]]></description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            121.4280452,23.669404,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>敦厚路156巷1號  (待救援) 5人 聯絡 周育璇</name>
+        <description><![CDATA[👉 敦厚路156巷1號 (待救援) 5人 聯絡 周育璇<br>（1個老人，1個婦女，還有3個小孩）在2樓需要水跟食物。聯絡人：周育璇 電話：0905535339。]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4274448,23.6702128,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>武昌街85巷1號(失聯)蔡玉美、林誠德（夫妻）</name>
+        <description><![CDATA[👉 武昌街85巷1號 (失聯) 林誠德 蔡玉美爸媽<br><br> 車牌｜0761-J3<br> 0916711946（語音信箱）失聯中<br> 聯絡 蔡小姐 0970-658-867<br>—<br>谷歌地址連結｜武昌街85號<br>https://maps.app.goo.gl/wdi8ZuRqs7offKVUA<br>—<br>9/29 11:00 新聞 失蹤第六天<br>https://www.threads.com/@ftvnews/post/DPKqpfQEhZa?xmt=AQF0E16aZn5DlMrRropvFsklOgqZ8aG5gRzi4wE8qG_Spw&slof=1<br>—<br>9/25 8:30協尋<br>https://www.threads.com/@hongqiyuan82/post/DPALrLfE9Yc?xmt<br><br>—<br>https://www.threads.com/@ruoling_21/post/DO-JCOeE9Tl?xmt<br><br>https://www.threads.com/@ivy1.040806/post/DO_5qJPE9bE?xmt]]></description>
+        <styleUrl>#icon-1899-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            121.4310759,23.6714218,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>仁愛路43號，阿嬤劉吉明(失聯)</name>
+        <description><![CDATA[👉 仁愛路43號，阿嬤劉吉明(失聯)<br>以前的賣麵小吃阿嬤，於昨晚就聯絡不上，鄰居確定不在家裡，如有消息請拜託馬上跟我聯絡，家人都非常擔心<br>https://www.threads.com/@do301_tw/post/DO9rUHtjDD5?xmt=AQF0E6AmLCS2j0TkvCN_g28qrshLZ8kjfFtrpsgLrmon_w&slof=1]]></description>
+        <styleUrl>#icon-1899-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            121.4247976,23.667043,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>佛祖街272巷2號(待救援)2人</name>
+        <description>佛祖街272巷2號(待救援)2人</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4348865,23.6713126,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>敦厚路35號 (失聯) 馮添福</name>
+        <description><![CDATA[👉 敦厚路35號，馮添福，該失聯者右腳截肢行動不方便，<br> 目前他的手機0906-543-399，已打不通。]]></description>
+        <styleUrl>#icon-1899-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            121.425892,23.6662152,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>敦厚路62號(受傷-待救援) 阿公</name>
+        <description><![CDATA[敦厚路62號<br>阿公好像受傷 妹妹才4、5歲左右。<br>https://www.threads.com/@lin.03_21_/post/DO8uSFmkr7J?xmt=AQF099egEzXfRbjAk_JYB-47C-YdJzzoies9Z_XPEG7wPQ&slof=1]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4262958,23.6667519,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>佛祖街46巷28-1號 (找到) 陳宥沂找到 </name>
+        <description><![CDATA[👉 9/25(4)更新 白小姐 白小姐 0932997718<br>女兒已經找到上新聞<br>—<br>剩下 王續盛（男）70歲左右<br>阿公屍體在那邊 還沒挖出來<br><br>👉 9/24(3) 佛祖街46巷28-1號 (找到) <br>陳宥沂 7歲女童（女童） 找到<br> 林佑臻(女70歲）王續盛(男70歲）離世]]></description>
+        <styleUrl>#icon-1899-757575</styleUrl>
+        <Point>
+          <coordinates>
+            121.4326498,23.6647175,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>佛祖街31號 ｜搜救 找到男孩屍體 9/25(4)</name>
+        <description><![CDATA[佛祖街31號 ｜搜救 找到男孩屍體 9/25(4)<br>https://www.threads.com/@yancha0413/post/DPBL94vgPYx?xmt=AQF0gIpOTjE1xcEOH3D3ma3a1DRjl-1-CEIDuINk5PPCYg&slof=1]]></description>
+        <styleUrl>#icon-1696-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            121.4324213,23.664498,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大進街 高金貴(失聯) 可能中午去光復車站買吃的 失蹤</name>
+        <description><![CDATA[9/25(4)大家好，我想請大家幫忙轉發🙏<br>我們的親友失蹤，希望能盡快找到他。<br>👤 姓名：高金貴<br>🎂 年齡：74歲<br>📏 特徵：約74歲，身高156～158，失聯時穿綠色上衣、牛仔褲、黑色雨鞋、騎粉紅色機車100cc<br>📍花蓮光復鄉<br>若有看到或相關消息，請立即聯繫：<br>☎ 聯絡電話：女兒高羚晏0976349177<br> 兒子高健傑0987244546<br>請大家幫忙留意周遭，任何消息都很重要！<br>拜託大家幫忙分享，讓更多人看到。🙏<br><br>https://www.threads.com/@___weixin/post/DPByUn9iQGy?xmt=AQF0LFMivIid8Y7iAna5EoGzo0srwRvB5saBmUc4S0mjOg&slof=1<br><br>---<br>https://www.threads.com/@croa0711/post/DPBy0hpk9oj?xmt=AQF04Rr0GHLH-pQsb4UrQbewxayRDaYlovmCgY5SK922Mw&slof=1<br>---<br>https://www.threads.com/@croa0711/post/DPBy0hpk9oj?xmt=AQF04Rr0GHLH-pQsb4UrQbewxayRDaYlovmCgY5SK922Mw&slof=1]]></description>
+        <styleUrl>#icon-1899-C2185B</styleUrl>
+        <Point>
+          <coordinates>
+            121.4230569,23.654711,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>狗狗待救援</name>
+        <description>狗狗待救援</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            121.4352361,23.6705824,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
